@@ -8,11 +8,20 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "baseUrl": ".",
-  },
-  "paths": {
-    "@/*": [
-      "src/*"
-    ]
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@views/*": [
+        "src/views/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ]
+    },
   },
   "include": [
     "./**/*.ts",

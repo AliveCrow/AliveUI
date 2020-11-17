@@ -11,12 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12ab8f7e-77f9-474e-b275-4b00b6b9039f" name="默认更改列表" comment="aside样式,手机端">
+      <change afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Aside.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Aside.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +60,7 @@
       <workItem from="1605583104451" duration="34000" />
       <workItem from="1605583145688" duration="20852000" />
       <workItem from="1605615731609" duration="54000" />
-      <workItem from="1605618967643" duration="412000" />
+      <workItem from="1605618967643" duration="761000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1605583165202</created>
@@ -93,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605603661031</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Nav组件和Aside组件响应式">
+      <created>1605619424957</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605619424957</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +121,8 @@
     <MESSAGE value="初始化router" />
     <MESSAGE value="aside样式" />
     <MESSAGE value="aside样式,手机端" />
-    <option name="LAST_COMMIT_MESSAGE" value="aside样式,手机端" />
+    <MESSAGE value="Nav组件和Aside组件响应式" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nav组件和Aside组件响应式" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1077" y="313" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605595749765">
@@ -132,9 +137,9 @@
       <screen x="-1920" y="25" width="1920" height="998" />
     </state>
     <state x="-1937" y="36" key="SettingsEditor/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605612050580" />
-    <state x="-1458" y="197" key="Vcs.Push.Dialog.v2" timestamp="1605583220357">
+    <state x="-1458" y="197" key="Vcs.Push.Dialog.v2" timestamp="1605619429138">
       <screen x="-1920" y="25" width="1920" height="998" />
     </state>
-    <state x="-1458" y="197" key="Vcs.Push.Dialog.v2/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605583220357" />
+    <state x="-1458" y="197" key="Vcs.Push.Dialog.v2/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605619429138" />
   </component>
 </project>
