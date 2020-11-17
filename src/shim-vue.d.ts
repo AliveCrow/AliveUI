@@ -4,3 +4,5 @@ declare module '*.vue'{
     const ComponentOptions:ComponentOptions
     export default ComponentOptions
 }
+
+declare module 'vue-eva-icons'

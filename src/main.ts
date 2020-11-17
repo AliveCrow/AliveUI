@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './index.css'
+import './index.scss'
 import {createWebHashHistory,createRouter} from 'vue-router'
 
 //新建history对象
@@ -9,9 +9,21 @@ const history = createWebHashHistory()
 const router = createRouter({
     history : history,
     routes:[
-
+        {
+            path:'/',
+            name:'Home',
+            component:()=>import('./views/Home.vue')
+        },
+        {
+            path:'/doc',
+            name:'Doc',
+            component:()=>import('./views/Doc.vue')
+        }
     ]
 })
 
-const app = createApp(router)
-app.mount('#app')
+createApp(App)
+    .use(router)
+    .mount('#app')
+
+

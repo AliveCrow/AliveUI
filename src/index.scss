@@ -1,0 +1,43 @@
+@import "assets/scss/var";
+
+#app {
+  font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
+  "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB",
+  "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN",
+  "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
+  SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color;
+  transition: all .2s ease .02s;
+
+  &:after {
+    content: '';
+    display: block;
+    opacity: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $light-color;
+  }
+
+  &:focus {
+    color: $light-color;
+    font-weight: 600;
+  }
+}
