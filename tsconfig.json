@@ -5,7 +5,14 @@
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "baseUrl": ".",
+  },
+  "paths": {
+    "@/*": [
+      "src/*"
+    ]
   },
   "include": [
     "./**/*.ts",
