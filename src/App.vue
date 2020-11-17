@@ -1,6 +1,11 @@
 <template>
-  <div class="app_box">
-    <aside>
+  <nav>
+    <div class="fold fold_click">
+    </div>
+    <img src="./assets/logo.png" alt="" class="nav_logo" width='121'>
+  </nav>
+  <div class="app_box ">
+    <aside class="aside_show">
       <img src="./assets/logo.png" alt="" class="logo" width='121'>
       <label>
         <input type="text" class="search">
@@ -77,10 +82,9 @@
             </ul>
           </li>
         </ul>
-
       </div>
     </aside>
-    <router-view/>
+    <router-view style="width: 100%"  />
   </div>
 </template>
 
@@ -92,7 +96,9 @@ export default {
   components: {
     HelloWorld
   },
+  method:{
 
+  }
 
 
 }
@@ -102,17 +108,28 @@ export default {
 <style lang="scss">
 @import "assets/scss/var";
 
+.nav{
+  display: none;
+}
+.nav_logo{
+  display: none;
+}
+.fold{
+  display: none;
+}
+
 .app_box {
   display: flex;
   height: 100%;
-
   aside {
-    width: 260px;
+    height: 100vh!important;
+    min-width: 260px;
     max-height: 100%;
     overflow-y: auto;
     box-shadow: 0 0 2px rgba(#000, .3);
     background-color: #fff;
     padding-left: 20px;
+    transition: all .4s cubic-bezier(.68,.18,.53,.18) .1s;
     &::-webkit-scrollbar{
       width: 8px;
     }
@@ -131,7 +148,6 @@ export default {
       width: 50px;
       margin: 20px auto;
     }
-
     .search {
       height: 30px;
       width: 200px;
@@ -145,7 +161,6 @@ export default {
         border-color: $light-color;
       }
     }
-
     .aside_content {
       text-align: left;
 
@@ -181,7 +196,85 @@ export default {
       }
     }
   }
-}
 
+
+
+}
+@media (max-width: 650px) {
+  nav{
+    box-shadow: 0 0 5px rgba(#000, .2);
+    padding: 10px;
+    position: relative;
+    z-index: 90;
+    width: 100%;
+    .nav_logo{
+      display: block;
+      width: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .fold{
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 3px;
+      border-radius: 5px;
+      background-color: $light-color;
+      transition: all .25s ease;
+      &:before{
+        transition: all .25s ease;
+        position: absolute;
+        top: -9px;
+        content: '';
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: $light-color;
+      }
+      &:after{
+        transition: all .25s ease;
+        content: '';
+        top: 9px;
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: $light-color;
+      }
+    }
+
+    .fold_click{
+      height: 0;
+      &:before{
+        transform: rotate(45deg);
+        top: 0;
+      }
+      &:after{
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+
+  }
+
+  aside{
+    position: absolute;
+    transform: translateX(-300px);
+    box-shadow: 0 5px 5px rgba(#000, .3) !important ;
+    .logo{
+      display: none!important;
+    }
+    .search{
+      display: none;
+    }
+  }
+
+  .aside_show{
+    display: block;
+    transform: translateX(0);
+  }
+}
 
 </style>
