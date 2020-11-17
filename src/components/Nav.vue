@@ -33,10 +33,12 @@ nav {
 
 @media (max-width: 650px) {
   nav {
+    min-height: 60px;
     display: block;
     box-shadow: 0 0 5px rgba(#000, 0.2);
     padding: 10px;
-    position: relative;
+    position: fixed;
+    background-color: #fff;
     z-index: 90;
     width: 100%;
 

@@ -1,7 +1,7 @@
 <template>
   <aside class="aside_show">
-    <img src="../assets/logo.png" alt="" class="logo" width="121"/>
-    <label >
+    <img src="../assets/logo.png" alt="" class="logo" width="121" />
+    <label>
       <input type="text" class="search" />
     </label>
     <div class="aside_content">
@@ -11,45 +11,43 @@
           <ul>
             <li>
               <router-link
-                  :to="{ path: '/doc' }"
-                  class="selected one_leave"
-                  @click="open">
+                :to="{ path: '/' }"
+                class="selected one_leave"
+                @click="open"
+              >
                 安装
               </router-link>
-              <ul class="two_level ">
+              <ul class="two_level">
                 <li>
-                  <router-link :to="{ path: '/doc' }">介绍2</router-link>
+                  <router-link :to="{ path: '/' }">介绍2</router-link>
                 </li>
                 <li>
-                  <router-link :to="{ path: '/doc' }">介绍2</router-link>
+                  <router-link :to="{ path: '/' }">介绍2</router-link>
                 </li>
                 <li>
-                  <router-link :to="{ path: '/doc' }">介绍2</router-link>
+                  <router-link :to="{ path: '/' }">介绍2</router-link>
                 </li>
                 <li>
-                  <router-link :to="{ path: '/doc' }">介绍2</router-link>
+                  <router-link :to="{ path: '/' }">介绍2</router-link>
                 </li>
               </ul>
             </li>
             <li>
-              <router-link
-                  :to="{ path: '/doc' }"
-                  class="one_leave"
-                  @click="open">
+              <router-link :to="{ path: '/' }" class="one_leave" @click="open">
                 介绍
               </router-link>
               <ul class="two_level hidden">
                 <li>
-                  <router-link :to="{ path: '/doc' }">介绍2</router-link>
+                  <router-link :to="{ path: '/' }">介绍2</router-link>
                 </li>
                 <li>
-                  <router-link :to="{ path: '/doc' }">介绍2</router-link>
+                  <router-link :to="{ path: '/' }">介绍2</router-link>
                 </li>
                 <li>
-                  <router-link :to="{ path: '/doc' }">介绍2</router-link>
+                  <router-link :to="{ path: '/' }">介绍2</router-link>
                 </li>
                 <li>
-                  <router-link :to="{ path: '/doc' }">介绍2</router-link>
+                  <router-link :to="{ path: '/' }">介绍2</router-link>
                 </li>
               </ul>
             </li>
@@ -81,28 +79,27 @@
 </template>
 
 <script lang="ts">
-import {inject, Ref} from 'vue';
+import { inject, Ref } from "vue";
 
 export default {
-  name: 'Aside',
+  name: "Aside",
   setup() {
-    const asideVisible = inject<Ref<boolean>>('asideVisible');
-  }
+    const asideVisible = inject<Ref<boolean>>("asideVisible");
+  },
 };
 </script>
 <style scoped lang="scss">
 @import "../assets/scss/var";
 
 aside {
-  height: 100vh !important;
   min-width: 260px;
-  max-height: 100%;
   overflow-y: auto;
   box-shadow: 0 0 2px rgba(#000, 0.3);
   background-color: #fff;
   padding-left: 20px;
   transition: all 0.4s cubic-bezier(0.68, 0.18, 0.53, 0.18) 0.1s;
   padding-bottom: 20px;
+
   &::-webkit-scrollbar {
     width: 8px;
   }
@@ -180,7 +177,7 @@ aside {
 @media (max-width: 650px) {
   aside {
     position: absolute;
-
+    height: 100vh;
     .logo {
       display: none !important;
     }
@@ -192,7 +189,6 @@ aside {
 
   .aside_show {
     display: block;
-
   }
 }
 </style>
