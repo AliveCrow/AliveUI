@@ -8,10 +8,10 @@
 </template>
 
 <script lang="ts">
-import { inject, Ref } from "vue";
+import { inject, Ref, onMounted, ref } from "vue";
 export default {
   setup() {
-    const asideVisible = inject<Ref<boolean>>("asideVisible");
+    const asideVisible = inject<Ref<Boolean>>("asideVisible", ref(false));
 
     const toggleAside = () => {
       asideVisible.value = !asideVisible.value;

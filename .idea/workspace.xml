@@ -11,9 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12ab8f7e-77f9-474e-b275-4b00b6b9039f" name="默认更改列表" comment="aside样式,手机端">
-      <change afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Aside.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Aside.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Doc.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Start.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Start.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +45,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="10.17.44" />
+    <property name="javascript.nodejs.core.library.typings.version" value="10.17.45" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -61,6 +63,8 @@
       <workItem from="1605583145688" duration="20852000" />
       <workItem from="1605615731609" duration="54000" />
       <workItem from="1605618967643" duration="761000" />
+      <workItem from="1605663925981" duration="51000" />
+      <workItem from="1605663989599" duration="910000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1605583165202</created>
@@ -102,6 +106,14 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/main.js.map" />
+        <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="$PROJECT_DIR$/src/router/index.js.map" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -133,10 +145,10 @@
       <screen x="-1920" y="25" width="1920" height="998" />
     </state>
     <state x="-1107" y="216" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605610144240" />
-    <state x="-1937" y="36" key="SettingsEditor" timestamp="1605612050580">
+    <state x="-1439" y="72" key="SettingsEditor" timestamp="1605664154821">
       <screen x="-1920" y="25" width="1920" height="998" />
     </state>
-    <state x="-1937" y="36" key="SettingsEditor/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605612050580" />
+    <state x="-1439" y="72" key="SettingsEditor/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605664154821" />
     <state x="-1458" y="197" key="Vcs.Push.Dialog.v2" timestamp="1605619429138">
       <screen x="-1920" y="25" width="1920" height="998" />
     </state>

@@ -10,68 +10,49 @@
           <h3>开始</h3>
           <ul>
             <li>
-              <router-link
-                :to="{ path: '/' }"
-                class="selected one_leave"
-                @click="open"
-              >
-                安装
-              </router-link>
-              <ul class="two_level">
-                <li>
-                  <router-link :to="{ path: '/' }">介绍2</router-link>
-                </li>
-                <li>
-                  <router-link :to="{ path: '/' }">介绍2</router-link>
-                </li>
-                <li>
-                  <router-link :to="{ path: '/' }">介绍2</router-link>
-                </li>
-                <li>
-                  <router-link :to="{ path: '/' }">介绍2</router-link>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <router-link :to="{ path: '/' }" class="one_leave" @click="open">
+              <router-link :to="{ path: '/' }" class="one_leave">
                 介绍
               </router-link>
-              <ul class="two_level hidden">
-                <li>
-                  <router-link :to="{ path: '/' }">介绍2</router-link>
-                </li>
-                <li>
-                  <router-link :to="{ path: '/' }">介绍2</router-link>
-                </li>
-                <li>
-                  <router-link :to="{ path: '/' }">介绍2</router-link>
-                </li>
-                <li>
-                  <router-link :to="{ path: '/' }">介绍2</router-link>
-                </li>
-              </ul>
+            </li>
+            <li>
+              <router-link :to="{ path: '/' }" class="one_leave">
+                下载与使用
+              </router-link>
             </li>
           </ul>
         </li>
         <li>
           <h3>样式</h3>
           <ul>
+            <span style="margin: 5px 0">常用元素</span>
             <li>
-              <router-link :to="{ path: '/doc' }" class="one_leave">
-                安装
-              </router-link>
+              <ul class="two_level">
+                <li>
+                  <router-link :to="{ path: '/' }" class="one_leave"
+                    >标题</router-link
+                  >
+                </li>
+                <li>
+                  <router-link :to="{ path: '/' }" class="one_leave"
+                    >文字</router-link
+                  >
+                </li>
+                <li>
+                  <router-link :to="{ path: '/' }" class="one_leave"
+                    >按钮</router-link
+                  >
+                </li>
+                <li>
+                  <router-link :to="{ path: '/' }" class="one_leave"
+                    >漂浮提示</router-link
+                  >
+                </li>
+              </ul>
             </li>
           </ul>
         </li>
         <li>
           <h3>组件</h3>
-          <ul>
-            <li>
-              <router-link :to="{ path: '/doc' }" class="selected one_leave">
-                按钮
-              </router-link>
-            </li>
-          </ul>
         </li>
       </ul>
     </div>
@@ -88,10 +69,12 @@ export default {
   },
 };
 </script>
+
 <style scoped lang="scss">
-@import "../assets/scss/var";
+@import "src/index.scss";
 
 aside {
+  height: 100vh;
   min-width: 260px;
   overflow-y: auto;
   box-shadow: 0 0 2px rgba(#000, 0.3);
@@ -143,11 +126,6 @@ aside {
       margin: 20px 0;
     }
 
-    .selected {
-      color: $light-color;
-      font-weight: 600;
-    }
-
     .one_leave {
       display: inline-block;
 
@@ -156,10 +134,6 @@ aside {
           opacity: 1;
         }
       }
-    }
-
-    .hidden {
-      display: none;
     }
 
     .two_level {
@@ -177,7 +151,7 @@ aside {
 @media (max-width: 650px) {
   aside {
     position: absolute;
-    height: 100vh;
+
     .logo {
       display: none !important;
     }
