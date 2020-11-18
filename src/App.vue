@@ -48,7 +48,10 @@ export default {
 
 .router {
   max-height: 100vh;
+  width: 800px;
+  max-width: 1000px;
   overflow: auto;
+  margin: 0 auto;
 }
 .fade-enter-active,
 .fade-leave-active {

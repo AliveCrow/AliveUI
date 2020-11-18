@@ -53,6 +53,30 @@
         </li>
         <li>
           <h3>组件</h3>
+          <ul>
+            <li>
+              <ul class="two_level">
+                <li>
+                  <router-link to="/Switch" class="one_leave">开关</router-link>
+                </li>
+                <li>
+                  <router-link :to="{ path: '/' }" class="one_leave"
+                    >文字</router-link
+                  >
+                </li>
+                <li>
+                  <router-link :to="{ path: '/' }" class="one_leave"
+                    >按钮</router-link
+                  >
+                </li>
+                <li>
+                  <router-link :to="{ path: '/' }" class="one_leave"
+                    >漂浮提示</router-link
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>

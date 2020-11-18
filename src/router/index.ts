@@ -20,6 +20,12 @@ const router = createRouter({
       path: '/components',
       name: 'Components',
       component: () => import('../views/Doc.vue')
+    },
+    {
+      path: '/Switch',
+      name: 'Switch',
+      component: () => import('../components/Switch/Switch.vue')
+
     }
 
   ]
