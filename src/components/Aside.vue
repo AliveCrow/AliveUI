@@ -15,7 +15,7 @@
               </router-link>
             </li>
             <li>
-              <router-link :to="{ path: '/' }" class="one_leave">
+              <router-link :to="{ path: '/Use' }" class="one_leave">
                 下载与使用
               </router-link>
             </li>
@@ -95,7 +95,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "src/index.scss";
+@import "../index.scss";
 
 aside {
   a {

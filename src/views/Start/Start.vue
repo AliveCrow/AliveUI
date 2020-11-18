@@ -20,7 +20,6 @@
         </Blod>
         开发
       </p>
-      <Switch v-model:value="value" />
       <ul>
         <li>最新版本:1.0.0</li>
         <li>上次更新:暂无</li>
@@ -36,23 +35,20 @@
 
 <script>
 import { onMounted } from "vue";
-import Switch from "../components/Switch/Switch.vue";
+import Switch from "../../components/Switch/Switch.vue";
 export default {
   components: {
     Switch,
   },
-  data() {
-    return {
-      value: false,
-    };
-  },
+
   setup(props, context) {},
 };
 </script>
 
 
 <style lang="scss" scoped>
-@import "./src/index.scss";
+@import "../../index.scss";
+
 .start_app {
   width: 100%;
   padding: 20px;
@@ -74,7 +70,6 @@ export default {
     & span {
       font-size: 24px;
       display: inline-block;
-      text-align: left;
       width: 100%;
       margin-bottom: 20px;
     }

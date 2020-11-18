@@ -8,7 +8,7 @@
     </transition>
     <div class="router">
       <router-view v-slot="{ Component }">
-        <transition name="fade">
+        <transition name="fade" mode="out-in">
           <keep-alive>
             <component :is="Component" />
           </keep-alive>
@@ -55,7 +55,7 @@ export default {
 .router {
   max-height: 100vh;
   overflow: auto;
-  margin: 0 auto;
+  margin: 60px auto;
 }
 
 @media (max-width: 650px) {
