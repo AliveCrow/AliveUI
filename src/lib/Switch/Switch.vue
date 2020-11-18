@@ -1,10 +1,11 @@
 <template>
   <div
-    id="SwitchContainer_app"
+    id="SwitchContainer"
     @click="toggleSwitch"
-    :class="[value ? 'true' : '']"
+    :class="[value ? 'alive-true' : 'alive-false']"
   >
-    <span :class="[value ? 'ani_true circle' : 'circle']"> </span>
+    <span :class="[value ? 'alive-ani_true alive-circle' : 'alive-circle']">
+    </span>
   </div>
 </template>
 
@@ -26,21 +27,22 @@ export default {
   },
 };
 </script>
-<style scoped lang='scss'>
-$circle: 16px;
-.true {
-  background-color: rgb(19, 206, 102) !important;
+<style  lang='scss'>
+.alive-false {
+  background-color: $error;
 }
-#SwitchContainer_app {
+.alive-true {
+  background-color: $success;
+}
+#SwitchContainer {
   width: 40px;
   height: 20px;
   border-radius: 20px;
   position: relative;
-  background-color: red;
   transition: all 0.4s cubic-bezier(1, 1.67, 0.21, 0.84);
-  .circle {
+  .alive-circle {
     position: absolute;
-    left: 2px;
+    left: 3px;
     display: inline-block;
     height: $circle;
     width: $circle;
@@ -50,25 +52,10 @@ $circle: 16px;
     transition: all 0.3s cubic-bezier(0.53, 1.66, 0, 0.53);
   }
 
-  .move_right {
-    transform: translateX(20px);
-  }
-
-  .ani_true {
+  .alive-ani_true {
     width: 4px;
     border-radius: 5px;
     left: 27px;
-  }
-  .ani_false {
-    position: absolute;
-    left: 2px;
-    display: inline-block;
-    height: $circle;
-    width: $circle;
-    border-radius: 50%;
-    margin: 2px 0;
-    background-color: #fff;
-    animation: circle 0.3s ease-in-out forwards 0.1s reverse !important;
   }
 
   @keyframes circle {

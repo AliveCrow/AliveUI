@@ -35,20 +35,13 @@
 
 <script>
 import { onMounted } from "vue";
-import Switch from "../../components/Switch/Switch.vue";
 export default {
-  components: {
-    Switch,
-  },
-
   setup(props, context) {},
 };
 </script>
 
 
 <style lang="scss" scoped>
-@import "../../index.scss";
-
 .start_app {
   width: 100%;
   padding: 20px;
@@ -65,7 +58,7 @@ export default {
   }
 
   .content {
-    margin: 20px;
+    margin-top: 40px;
     text-align: left;
     & span {
       font-size: 24px;

@@ -11,6 +11,9 @@ html,body{
     background: $light-color;
     color: #fff;
   }
+&::-webkit-scrollbar {
+width: 0px;
+}
 }
 
 #app {
@@ -43,32 +46,19 @@ a {
     background-color: $light-color;
     transition: all 0.2s ease 0.02s;
   }
-
 }
 
 .selected {
-  color: $light-color;
-  font-weight: 600;
+  color: $light-color!important;
 }
 .hidden {
   display: none;
 }
 
 
-.slide-enter-active,
-.slide-leave-active {
-  transition: all .3s linear;
-}
-.slide-enter-from,
-.slide-leave-to {
-  transform: translateX(-285px);
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: all .4s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
 }

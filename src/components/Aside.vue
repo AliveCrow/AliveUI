@@ -10,12 +10,20 @@
           <h3>开始</h3>
           <ul>
             <li>
-              <router-link :to="{ path: '/' }" class="one_leave">
+              <router-link
+                :to="{ path: '/' }"
+                class="one_leave"
+                :class="{ selected: fullPath === '/' }"
+              >
                 介绍
               </router-link>
             </li>
             <li>
-              <router-link :to="{ path: '/Use' }" class="one_leave">
+              <router-link
+                :to="{ path: '/Use' }"
+                class="one_leave"
+                :class="{ selected: fullPath === '/Use' }"
+              >
                 下载与使用
               </router-link>
             </li>
@@ -57,16 +65,24 @@
             <li>
               <ul class="two_level">
                 <li>
-                  <router-link to="/Switch" class="one_leave">开关</router-link>
+                  <router-link
+                    to="/Switch"
+                    class="one_leave"
+                    :class="{ selected: fullPath === '/Switch' }"
+                    >Switch组件</router-link
+                  >
                 </li>
                 <li>
-                  <router-link :to="{ path: '/' }" class="one_leave"
-                    >文字</router-link
+                  <router-link
+                    :to="{ path: '/Button' }"
+                    class="one_leave"
+                    :class="{ selected: fullPath === '/Button' }"
+                    >按钮</router-link
                   >
                 </li>
                 <li>
                   <router-link :to="{ path: '/' }" class="one_leave"
-                    >按钮</router-link
+                    >文字</router-link
                   >
                 </li>
                 <li>
@@ -84,19 +100,33 @@
 </template>
 
 <script lang="ts">
-import { inject, Ref } from "vue";
+import { inject, Ref, onMounted, computed } from "vue";
+import router from "/@/router";
 
 export default {
   name: "Aside",
-  setup() {
+  props: {
+    fullPath: String,
+  },
+  setup(props) {
     const asideVisible = inject<Ref<boolean>>("asideVisible");
+    const fullPath = computed({
+      get: () => router.currentRoute.value.fullPath,
+      set: (val) => {
+        return val;
+      },
+    });
+    onMounted: {
+      fullPath.value = router.currentRoute.value.fullPath;
+    }
+    return {
+      fullPath,
+    };
   },
 };
 </script>
 
 <style scoped lang="scss">
-@import "../index.scss";
-
 aside {
   a {
     color: $color;
@@ -108,7 +138,6 @@ aside {
     }
     &:focus {
       color: $light-color;
-      font-weight: 600;
       transition: all 0.2s ease 0.02s;
     }
   }

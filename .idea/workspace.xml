@@ -11,12 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12ab8f7e-77f9-474e-b275-4b00b6b9039f" name="默认更改列表" comment="aside样式,手机端">
-      <change afterPath="$PROJECT_DIR$/src/components/Switch/Switch.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/Switch/SwitchContainer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Switch/SwitchLib.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Aside.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Aside.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Switch/Switch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Switch/Switch.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Start/Start.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Start/Start.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +66,7 @@
       <workItem from="1605618967643" duration="761000" />
       <workItem from="1605663925981" duration="51000" />
       <workItem from="1605663989599" duration="2221000" />
+      <workItem from="1605687021987" duration="1790000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1605583165202</created>

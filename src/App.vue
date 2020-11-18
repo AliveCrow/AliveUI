@@ -2,6 +2,7 @@
   <div style="height: 60px" class="nav_box">
     <Nav />
   </div>
+
   <div style="display: flex; flex-direction: row">
     <transition name="slide">
       <Aside v-show="asideVisible" />
@@ -34,7 +35,6 @@ export default {
     const screenWidth = document.documentElement.clientWidth; //页面宽度
     const asideVisible = ref(screenWidth > 650);
     provide("asideVisible", asideVisible);
-
     router.afterEach((to, from) => {
       // to and from are both route objects.
       if (screenWidth < 650) {
@@ -54,8 +54,11 @@ export default {
 
 .router {
   max-height: 100vh;
-  overflow: auto;
-  margin: 60px auto;
+  width: 100%;
+  overflow-y: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px;
 }
 
 @media (max-width: 650px) {
