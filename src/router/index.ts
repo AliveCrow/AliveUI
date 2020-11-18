@@ -26,6 +26,12 @@ const router = createRouter({
       name: 'Switch',
       component: () => import('../components/Switch/Switch.vue')
 
+    },
+    {
+      path: '/404',
+      name: 'NotFound',
+      component: () => import('../views/NotFound.vue')
+
     }
 
   ]

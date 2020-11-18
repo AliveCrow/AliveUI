@@ -3,17 +3,23 @@
     <Nav />
   </div>
   <div style="display: flex; flex-direction: row">
-    <transition name="fade">
+    <transition name="slide">
       <Aside v-show="asideVisible" />
     </transition>
     <div class="router">
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <transition name="fade">
+          <keep-alive>
+            <component :is="Component" />
+          </keep-alive>
+        </transition>
+      </router-view>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { provide, ref } from "vue";
+import { provide, ref, Component } from "vue";
 import Nav from "./components/Nav.vue";
 import Aside from "./components/Aside.vue";
 import router from "./router";
@@ -48,18 +54,8 @@ export default {
 
 .router {
   max-height: 100vh;
-  width: 800px;
-  max-width: 1000px;
   overflow: auto;
   margin: 0 auto;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 2s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  transform: translateX(-285px);
 }
 
 @media (max-width: 650px) {

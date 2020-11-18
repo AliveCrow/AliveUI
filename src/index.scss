@@ -1,4 +1,16 @@
 @import "assets/scss/var";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  ::selection {
+    background: $light-color;
+    color: #fff;
+  }
+}
 
 #app {
   font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
@@ -13,10 +25,8 @@
   height: 100vh;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+li,a{
+  cursor: default;
 }
 
 li {
@@ -24,23 +34,15 @@ li {
 }
 a {
   text-decoration: none;
-  color: $color;
-  transition: all .2s ease .02s;
   &:after {
-    content: '';
+    content: "";
     display: block;
-    opacity:0;
-    width: 100%;
+    width: 0;
     height: 2px;
     background-color: $light-color;
-    transition: all .2s ease .02s;
+    transition: all 0.2s ease 0.02s;
   }
 
-  &:focus {
-    color: $light-color;
-    font-weight: 600;
-    transition: all .2s ease .02s;
-  }
 }
 
 .selected {
@@ -49,4 +51,23 @@ a {
 }
 .hidden {
   display: none;
+}
+
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all .3s linear;
+}
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(-285px);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .4s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }

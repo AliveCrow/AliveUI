@@ -98,6 +98,20 @@ export default {
 @import "src/index.scss";
 
 aside {
+  a {
+    color: $color;
+    transition: all 0.2s ease 0.02s;
+    display: inline-block;
+    &::after {
+      opacity: 0;
+      width: 100%;
+    }
+    &:focus {
+      color: $light-color;
+      font-weight: 600;
+      transition: all 0.2s ease 0.02s;
+    }
+  }
   height: 100vh;
   min-width: 260px;
   overflow-y: auto;
