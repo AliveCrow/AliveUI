@@ -16,7 +16,7 @@
       </template>
       <template v-slot:content>
         <div class="btn-type">
-          <Button />
+          <Button @click="onClick" />
           <Button type="primary" />
           <Button type="success" />
           <Button type="warning" />
@@ -141,13 +141,13 @@ export default {
   <Button type="primary" size="small" @click="click">small</Button>
 `,
     };
-    const click = () => {
+    const onClick = () => {
       console.log("click");
     };
 
     return {
       code,
-      click,
+      onClick,
     };
   },
 };

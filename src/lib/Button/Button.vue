@@ -17,6 +17,7 @@
       :loading="loading"
       :size="size"
       :long="long"
+      v-bind="$attrs"
     >
       <slot v-if="!icon">CLICK ME</slot>
       <div v-else style="display: flex">
@@ -37,6 +38,8 @@
 </template>
 <script lang='ts'>
 export default {
+  inheritAttrs: false, //取消默认绑定事件
+
   name: "Button",
   props: {
     content: String, //内容
@@ -53,10 +56,8 @@ export default {
   },
 
   setup(props, context) {
-    //未加外层div不需要此操作
-    inheritAttrs: false; //取消默认绑定事件
-    const { ...rest } = context.attrs;
-    return { rest };
+    // const { ...rest } = context.attrs;
+    // return { rest };
   },
 };
 </script>
