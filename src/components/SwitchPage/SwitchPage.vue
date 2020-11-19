@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <span> 代码示例 </span>
+    <span> Switch开关组件 </span>
     <ShowBox>
       <template v-slot:title>
         <a>基础用法</a>
@@ -9,9 +9,8 @@
         <p>绑定<Blod>v-model</Blod>到一个<Blod>Boolean</Blod>类型的变量。</p>
       </template>
       <template v-slot:code>
-        <pre v-vuehighlightjs="code">
+        <pre v-vuehighlightjs="codeArr.base">
               <code class='html' >
-              {{ code }}
               </code>
           </pre>
       </template>
@@ -31,7 +30,7 @@
         </p></template
       >
       <template v-slot:code>
-        <pre v-vuehighlightjs="code1">
+        <pre v-vuehighlightjs="codeArr.changeColor">
               <code class='html' >
   
               </code>
@@ -49,7 +48,7 @@
         <p>设置<Blod>loading</Blod>为一个<Blod>Boolean</Blod>类型</p>
       </template>
       <template v-slot:code>
-        <pre v-vuehighlightjs="code2">
+        <pre v-vuehighlightjs="codeArr.loading">
               <code class='html' >
   
               </code>
@@ -63,49 +62,46 @@
 
 <script lang="ts">
 import Switch from "../../lib/Switch/Switch.vue";
-import ExampleBox from "../ExampleBox.vue";
 import { ref } from "vue";
 
 export default {
   name: "SwitchPage",
-  components: { Switch, ExampleBox },
-  data() {
-    return {
-      code: `
-    <Switch v-model:value="value" />
+  components: { Switch },
+  setup() {
+    const codeArr = {
+      base: `
+  <Switch v-model:value="value" />
 
-    export default {
-      setup() {
-        const value = ref(true)
+  export default {
+    setup() {
+      const value = ref(true)
 
-        return {
-          value
-        }
+      return {
+        value
       }
     }
-      `,
-      code1: `
-      <Switch v-model:value="value" trueColor="#433" falseColor="#888" />
+  }
+`,
+      changeColor: `
+  <Switch v-model:value="value" trueColor="#433" falseColor="#888" />
 
-      export default {
-        setup() {
-          const value = ref(true)
+  export default {
+    setup() {
+      const value = ref(true)
 
-          return {
-            value
-          }
-        }
+      return {
+        value
       }
-      `,
-      code2: `
-      <Switch loading />
+    }
+  }
+`,
+      loading: `
+  <Switch loading />
 
-      export default {
-      }
-      `,
+  export default {
+  }      
+`,
     };
-  },
-  setup() {
     const value = ref(false);
     const value1 = ref(false);
     let codeShow = ref(false);
@@ -113,6 +109,7 @@ export default {
       codeShow.value = !codeShow.value;
     };
     return {
+      codeArr,
       value,
       value1,
       codeShow,

@@ -1,7 +1,11 @@
 <template>
   <div class="show-box">
-    <slot name="title"> </slot>
-    <slot name="description"></slot>
+    <a>
+      <slot name="title"> </slot>
+    </a>
+    <p>
+      <slot name="description"> </slot>
+    </p>
     <div class="switch-type">
       <section class="title">
         <svg class="icon openCode" @click="hidden">
@@ -12,7 +16,9 @@
         <slot name="code"></slot>
       </section>
       <section class="content">
-        <slot name="content"></slot>
+        <div class="btn-type">
+          <slot name="content"></slot>
+        </div>
       </section>
     </div>
   </div>
@@ -86,13 +92,15 @@ export default {
       width: 100%;
       overflow-y: auto;
       border-top: 1px solid $color;
-      &::-webkit-scrollbar {
-        width: 0;
-      }
     }
     .content {
       padding: 20px;
       // border-top: none;
+      .btn-type {
+        .alive-button__container {
+          margin: 5px;
+        }
+      }
     }
   }
 }

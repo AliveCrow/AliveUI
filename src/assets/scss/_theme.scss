@@ -24,7 +24,17 @@ hue-6-2: #c18401
 }
 .code{
   background:   #eee;
+  padding-bottom: -200px;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-color: $light-color;
+    border-radius: 2px;
+  }
 }
+
+
 
 .hljs {
   display: block;

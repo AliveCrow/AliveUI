@@ -65,7 +65,7 @@ export default {
     width: 8px;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: $logo-color;
+    background-color: $light-color;
     width: 8px;
     border-radius: 4px;
   }

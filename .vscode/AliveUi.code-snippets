@@ -15,24 +15,16 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"showBox": {
-		"prefix": "showBox",
+	"Blod": {
+		"prefix": "blod",
 		"body": [
-			"<ShowBox>"
-			"<template v-slot:title>"
-			"\n"
-		"</template>"
-		"<template v-slot:description>"
-		"\n"
-		"</template>"
-		"<template v-slot:code>"
-		"\n"
-				"</template>"
-				"<template v-slot:content>"
-				"\n"
-				"</template>"
-				"</ShowBox>"
-			`
-		],
+			"<Blod>$CLIPBOARD</Blod>"
+		]
+	},
+	"heightlight": {
+		"prefix": "hl",
+		"body": [
+			"<pre v-vuehighlightjs='${1:默认变量}'>\n<code class='html'>\n{{${1:默认变量}}}\n</code>\n</pre>"
+		]
 	}
 }
