@@ -54,9 +54,9 @@ export default {
 
   setup(props, context) {
     //未加外层div不需要此操作
-    // inheritAttrs: false; //取消默认绑定事件
-    // const { ...rest } = context.attrs;
-    // return { rest };
+    inheritAttrs: false; //取消默认绑定事件
+    const { ...rest } = context.attrs;
+    return { rest };
   },
 };
 </script>
