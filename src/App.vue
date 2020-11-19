@@ -59,11 +59,28 @@ export default {
   margin-left: auto;
   margin-right: auto;
   padding: 60px;
+  overflow-y: scroll !important;
+  overflow-y: overlay;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $logo-color;
+    width: 8px;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    width: 8px;
+  }
 }
 
 @media (max-width: 650px) {
   .nav_box {
     display: block;
+  }
+  .router {
+    padding: 60px 30px;
   }
   body {
     &::-webkit-scrollbar {

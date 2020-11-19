@@ -2,9 +2,19 @@
   <div
     id="SwitchContainer"
     @click="toggleSwitch"
-    :class="[value ? 'alive-true' : 'alive-false']"
+    :class="
+      [value ? 'alive-true ' : 'alive-false '] +
+      [trueColor ? trueColor : falseColor]
+    "
+    :style="'background-color:' + [value ? trueColor : falseColor]"
   >
-    <span :class="[value ? 'alive-ani_true alive-circle' : 'alive-circle']">
+    <span
+      :class="
+        [loading ? ' alive-switch-loading ' : ''] +
+        [value ? ' alive-ani_true alive-circle' : ' alive-circle']
+      "
+    >
+      <span class="alive-switch-loading-circel"> </span>
     </span>
   </div>
 </template>
@@ -16,6 +26,9 @@ export default {
   name: "Switch",
   props: {
     value: Boolean,
+    loading: Boolean,
+    trueColor: String,
+    falseColor: String,
   },
   setup(props, context) {
     const toggleSwitch = () => {
@@ -34,6 +47,7 @@ export default {
 .alive-true {
   background-color: $success;
 }
+
 #SwitchContainer {
   width: 40px;
   height: 20px;
@@ -51,13 +65,34 @@ export default {
     background-color: #fff;
     transition: all 0.3s cubic-bezier(0.53, 1.66, 0, 0.53);
   }
-
   .alive-ani_true {
     width: 4px;
     border-radius: 5px;
     left: 27px;
   }
-
+  .alive-switch-loading {
+    box-shadow: 0 0 7px rgba(#000, 0.5);
+    .alive-switch-loading-circel {
+      position: absolute;
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      border: 2px solid red;
+      border-color: #fff $light-color $light-color #fff;
+      background-color: transparent;
+      animation: switch-rotate 1s linear infinite;
+    }
+    @keyframes switch-rotate {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+  }
   @keyframes circle {
     0% {
       transform: translateX(0px);

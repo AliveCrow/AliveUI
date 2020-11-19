@@ -38,7 +38,7 @@
       <div class="btn-type">
         <Button type="primary" size="large">large</Button>
         <Button type="primary">default</Button>
-        <Button type="primary" size="small">small</Button>
+        <Button type="primary" size="small" @click="click">small</Button>
       </div>
     </div>
   </div>
@@ -49,37 +49,22 @@ export default {
   components: {
     Button,
   },
+
+  setup() {
+    const click = () => {
+      console.log("click");
+    };
+
+    return {
+      click,
+    };
+  },
 };
 </script>
 <style lang='scss' scoped>
-.content {
-  text-align: left;
-  width: 100%;
-  & > span {
-    font-size: 24px;
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .show-box {
-    margin-bottom: 20px;
-  }
-  .show-box > a {
-    display: inline-block;
-    margin-bottom: 5px;
-    position: relative;
-    &::before {
-      content: "#";
-      position: absolute;
-      left: -1rem;
-      color: $light-color;
-      font-weight: 700;
-    }
-  }
-  .btn-type {
-    button {
-      margin: 5px;
-    }
+.btn-type {
+  .alive-button__container {
+    margin: 5px;
   }
 }
 </style>

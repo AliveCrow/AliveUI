@@ -11,7 +11,8 @@
   "include": [
     "./**/*.ts",
     "./**/*.tsx",
-    "./**/*.vue"
+    "./**/*.vue",
+    "src/utils/vue3-hightlight.ts"
   ],
   "exclude": [
     "node_modules"

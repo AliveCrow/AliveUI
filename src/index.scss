@@ -1,4 +1,4 @@
-@import "assets/scss/var";
+@import 'assets/scss/theme';
 
 * {
   padding: 0;
@@ -6,15 +6,18 @@
   box-sizing: border-box;
 }
 
+
 html,body{
   ::selection {
     background: $light-color;
     color: #fff;
   }
-&::-webkit-scrollbar {
-width: 0px;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+
 }
-}
+
 
 #app {
   font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
@@ -27,6 +30,7 @@ width: 0px;
   text-align: center;
   color: #2c3e50;
   height: 100vh;
+  font-size: 14px;
 }
 
 li,a{
@@ -55,10 +59,32 @@ a {
   display: none;
 }
 
+.content {
+  text-align: left;
+  width: 100%;
+  & > span {
+    font-size: 24px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .show-box {
+    margin-bottom: 20px;
+  }
+  .show-box > a {
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+    &::before {
+      content: "#";
+      position: absolute;
+      left: -1rem;
+      color: $light-color;
+      font-weight: 700;
+    }
+  }
 
-.icon {
-  width: 1em; height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
 }
+
+
+

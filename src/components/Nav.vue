@@ -37,7 +37,7 @@ nav {
     padding: 10px;
     position: fixed;
     background-color: #fff;
-    z-index: 90;
+    z-index: 91;
     width: 100%;
 
     .nav_logo {

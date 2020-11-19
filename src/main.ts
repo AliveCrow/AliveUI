@@ -1,16 +1,18 @@
 
 import './index.scss'
+import './lib/alive.scss'
+
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import Blod from './components/Blod.vue'
-import '/@/lib/alive.scss'
+import ShowBox from './components/ShowBox.vue'
 
-
+import HighlightJS from './utils/vue3-hightlight'
 
 createApp(App)
     .use(router)
-    .component('Blod', Blod)
+    .use(HighlightJS)
+    .component('ShowBox', ShowBox)
     .mount('#app')
 
 

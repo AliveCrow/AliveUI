@@ -218,7 +218,7 @@ aside {
 @media (max-width: 650px) {
   aside {
     position: absolute;
-
+    z-index: 90;
     .logo {
       display: none !important;
     }

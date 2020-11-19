@@ -8,7 +8,10 @@
 export default {
   name: "Blod",
   props: {
-    color: String,
+    color: {
+      type: String,
+      default: "rgb(255, 79, 87)",
+    },
   },
 };
 </script>

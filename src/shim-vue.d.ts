@@ -5,4 +5,10 @@ declare module '*.vue' {
     export default componentOptions
 }
 
-declare module '@purge-icons/generated';
+
+declare module 'vue3-highlightjs';
+
+declare module 'highlight.js' {
+    const hljs: HLJSApi
+    export default hljs
+}
