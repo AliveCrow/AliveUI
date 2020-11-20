@@ -70,17 +70,20 @@ export default {
   setup() {
     const codeArr = {
       base: `
-  <Switch v-model:value="value" />
+  '<template>
+    <Switch v-model:value="value" />
+  </template>
+      export default {
+        setup() {
+          const value = ref(true)
 
-  export default {
-    setup() {
-      const value = ref(true)
-
-      return {
-        value
+          return {
+            value
+          }
       }
-    }
   }
+  '
+
 `,
       changeColor: `
   <Switch v-model:value="value" trueColor="#433" falseColor="#888" />

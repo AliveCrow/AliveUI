@@ -44,7 +44,7 @@
       <template v-slot:content>
         <Button type="primary" size="large">large</Button>
         <Button type="primary">default</Button>
-        <Button type="primary" size="small" @click="click">small</Button>
+        <Button type="primary" size="small">small</Button>
       </template>
     </ShowBox>
     <ShowBox>
@@ -112,6 +112,7 @@ export default {
   setup() {
     const code = {
       base: `
+<template>
   <Button />
   <Button type="primary" />
   <Button type="success" />
@@ -123,6 +124,7 @@ export default {
   </Button>
   <Button type="primary" round icon="iconfolder-add-outline">
   </Button>
+</template>
 `,
       disable: `
   <Button type="primary" disable />
