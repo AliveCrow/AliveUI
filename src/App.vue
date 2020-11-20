@@ -8,7 +8,10 @@
       <Aside v-show="asideVisible" />
     </transition>
     <div class="router">
-      <router-view v-slot="{ Component }">
+      <router-view
+        v-slot="{ Component }"
+        style="max-width: 700px; margin: 0 auto"
+      >
         <transition name="fade" mode="out-in">
           <keep-alive>
             <component :is="Component" />
