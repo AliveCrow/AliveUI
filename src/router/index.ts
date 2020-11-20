@@ -9,40 +9,40 @@ const router = createRouter({
     {
       path: '/',
       name: 'Start',
-      component: () => import('/@/views/Start/Start.vue')
+      component: () => import('../views/Start/Start.vue')
     },
     {
       path: '/Use',
       name: 'Use',
-      component: () => import('/@/views/Start/Use.vue')
+      component: () => import('../views/Start/Use.vue')
     },
     {
       path: '/Switch',
       name: 'Switch',
-      component: () => import('/@/components/SwitchPage/SwitchPage.vue')
+      component: () => import('../components/SwitchPage/SwitchPage.vue')
 
     },
     {
       path: '/Button',
       name: 'Button',
-      component: () => import('/@/components/ButtonPage/ButtonPage.vue')
+      component: () => import('../components/ButtonPage/ButtonPage.vue')
 
     },
     {
-      path: '/style',
-      name: 'Style',
-      component: () => import('/@views/Doc.vue')
+      path: '/Dialog',
+      name: 'Dialog',
+      component: () => import('../components/DialogPage/DialogPage.vue')
     },
     {
       path: '/components',
       name: 'Components',
-      component: () => import('/@views/Doc.vue')
+      component: () => import('../views/Doc.vue')
     },
 
     {
       path: '/404',
       name: 'NotFound',
-      component: () => import('/@views/NotFound.vue')
+      component: () => import('../views/NotFound.vue')
 
     }
 

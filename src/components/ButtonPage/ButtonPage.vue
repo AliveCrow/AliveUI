@@ -143,9 +143,7 @@ export default {
   <Button type="primary" size="small" @click="click">small</Button>
 `,
     };
-    const onClick = () => {
-      console.log("click");
-    };
+    const onClick = () => {};
 
     return {
       code,

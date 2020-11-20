@@ -53,7 +53,7 @@ export default {
   height: 20px;
   border-radius: 20px;
   position: relative;
-  transition: all 0.4s cubic-bezier(1, 1.67, 0.21, 0.84);
+  transition: all 0.6s cubic-bezier(1, 1.67, 0.21, 0.84);
   .alive-circle {
     position: absolute;
     left: 3px;
@@ -63,7 +63,7 @@ export default {
     border-radius: 50%;
     margin: 2px 0;
     background-color: #fff;
-    transition: all 0.3s cubic-bezier(0.53, 1.66, 0, 0.53);
+    transition: all 0.6s cubic-bezier(0.53, 1.66, 0, 0.53);
   }
   .alive-ani_true {
     width: 4px;

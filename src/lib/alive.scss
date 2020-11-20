@@ -1,4 +1,9 @@
+@import './animate';
+@import './var';
 
+*{
+  color: $color;
+}
 
 [class^="alive-"],[class*=" alive-"] {
   box-sizing: border-box;
@@ -45,5 +50,9 @@
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.is-visible{
+  animation: isvible .4s forwards;
 }
 

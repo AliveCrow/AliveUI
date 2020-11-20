@@ -77,12 +77,12 @@
                     :to="{ path: '/Button' }"
                     class="one_leave"
                     :class="{ selected: fullPath === '/Button' }"
-                    >按钮</router-link
+                    >Button按钮</router-link
                   >
                 </li>
                 <li>
-                  <router-link :to="{ path: '/' }" class="one_leave"
-                    >文字</router-link
+                  <router-link :to="{ path: '/Dialog' }" class="one_leave"
+                    >Dialog弹出框</router-link
                   >
                 </li>
                 <li>
@@ -101,7 +101,7 @@
 
 <script lang="ts">
 import { inject, Ref, onMounted, computed } from "vue";
-import router from "/@/router";
+import router from "../router/index";
 
 export default {
   name: "Aside",

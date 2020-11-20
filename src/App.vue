@@ -2,16 +2,12 @@
   <div style="height: 60px" class="nav_box">
     <Nav />
   </div>
-
   <div style="display: flex; flex-direction: row">
     <transition name="slide">
       <Aside v-show="asideVisible" />
     </transition>
     <div class="router">
-      <router-view
-        v-slot="{ Component }"
-        style="max-width: 700px; margin: 0 auto"
-      >
+      <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">
           <keep-alive>
             <component :is="Component" />
@@ -20,6 +16,7 @@
       </router-view>
     </div>
   </div>
+  <div class="alive-dialog-modal" id="alive-dialog-modal"></div>
 </template>
 
 <script lang="ts">

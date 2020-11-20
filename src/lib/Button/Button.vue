@@ -8,7 +8,8 @@
         [long ? ' long ' : ''] +
         [loading ? ' loading ' : ''] +
         [disable ? ' disable ' : ''] +
-        [size ? ` ${size}` : '']
+        [size ? ` ${size}` : ''] +
+        [down ? ' alive-button-down ' : ' ']
       "
       :type="type"
       :icon="icon"
@@ -18,18 +19,23 @@
       :size="size"
       :long="long"
       v-bind="$attrs"
+      @mousedown="onMouseDown"
+      @mouseup="onMouseUp"
     >
       <slot v-if="!icon">CLICK ME</slot>
       <div v-else style="display: flex">
         <div>
           <svg
-            :class="'icon alive-icon' + [loading ? ' icon-loading' : '']"
+            :class="
+              'icon alive-button-svg alive-icon' +
+              [loading ? ' icon-loading' : '']
+            "
             aria-hidden="true"
           >
             <use :xlink:href="'#' + icon"></use>
           </svg>
         </div>
-        <span>
+        <span class="alive-button-font">
           <slot></slot>
         </span>
       </div>
@@ -37,6 +43,7 @@
   </div>
 </template>
 <script lang='ts'>
+import { ref } from "vue";
 export default {
   inheritAttrs: false, //取消默认绑定事件
 
@@ -58,19 +65,37 @@ export default {
   setup(props, context) {
     // const { ...rest } = context.attrs;
     // return { rest };
+    const down = ref(false);
+    const onMouseDown = () => {
+      down.value = true;
+    };
+    const onMouseUp = () => {
+      down.value = false;
+    };
+    return {
+      onMouseDown,
+      onMouseUp,
+      down,
+    };
   },
 };
 </script>
 <style lang='scss'>
 .alive-button__container {
   display: inline-block;
+  .alive-button-svg {
+    fill: #fff;
+  }
+  .alive-button-font {
+    color: #fff;
+  }
   .alive-button {
     padding: 0 15px;
     height: 32px;
     background-color: #fff;
     outline: none;
     border: 1px solid $secondary;
-    border-radius: 4px;
+    border-radius: 2px;
     transition: all 0.2s linear;
     &:hover {
       box-shadow: 0 1px 6px rgba($logo-color, 0.6);
@@ -139,6 +164,10 @@ export default {
       transform: none;
       box-shadow: none;
     }
+  }
+  .alive-button-down {
+    transform: translateY(1px) !important;
+    box-shadow: 0 1px 2px rgba($logo-color, 0.4) !important;
   }
   .icon-loading {
     animation: loading 2s linear infinite;

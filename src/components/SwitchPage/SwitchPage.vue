@@ -58,6 +58,7 @@
         <Switch loading />
       </template>
     </ShowBox>
+  </div>
 </template>
 
 <script lang="ts">
