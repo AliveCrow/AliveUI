@@ -22,9 +22,8 @@
       @mousedown="onMouseDown"
       @mouseup="onMouseUp"
     >
-      <slot v-if="!icon">CLICK ME</slot>
-      <div v-else style="display: flex">
-        <div>
+      <div style="display: flex">
+        <div v-if="icon">
           <svg
             :class="
               'icon alive-button-svg alive-icon' +
@@ -35,9 +34,9 @@
             <use :xlink:href="'#' + icon"></use>
           </svg>
         </div>
-        <span class="alive-button-font">
-          <slot></slot>
-        </span>
+        <div class="alive-button-font">
+          <slot>CLICK ME</slot>
+        </div>
       </div>
     </button>
   </div>
@@ -85,10 +84,9 @@ export default {
   display: inline-block;
   .alive-button-svg {
     fill: #fff;
+    margin-right: 5px;
   }
-  .alive-button-font {
-    color: #fff;
-  }
+
   .alive-button {
     padding: 0 15px;
     height: 32px;
@@ -96,9 +94,14 @@ export default {
     outline: none;
     border: 1px solid $secondary;
     border-radius: 2px;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
+    .alive-button-font {
+      color: #fff;
+      transition: all 0.3s linear;
+      font-size: 14px;
+    }
     &:hover {
-      box-shadow: 0 1px 6px rgba($logo-color, 0.6);
+      box-shadow: 0 1px 6px rgba($logo-color, 0.7);
       transform: translateY(-1px);
     }
   }

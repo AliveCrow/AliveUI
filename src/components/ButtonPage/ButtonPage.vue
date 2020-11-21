@@ -16,7 +16,7 @@
       </template>
       <template v-slot:content>
         <div class="btn-type">
-          <Button @click="onClick" />
+          <Button><span style="color: #000">默认按钮</span></Button>
           <Button type="primary" />
           <Button type="success" />
           <Button type="warning" />

@@ -6,8 +6,8 @@
       <template v-slot:description> Dialog 弹出一个对话框 </template>
       <template v-slot:code> </template>
       <template v-slot:content>
-        <Button @click="toggleDialog" type="primary">默认用法</Button>
-        <Button @click="toggleDialog" type="success">Success</Button>
+        <Button @click="toggleDialog" type="error">Success</Button>
+        <Button @click="toggleDialog" type="success">是</Button>
         <Button type="warning" @click="openDialog">dakai</Button>
       </template>
     </ShowBox>

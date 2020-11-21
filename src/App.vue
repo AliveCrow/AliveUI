@@ -7,13 +7,15 @@
       <Aside v-show="asideVisible" />
     </transition>
     <div class="router">
-      <router-view v-slot="{ Component }">
-        <transition name="fade" mode="out-in">
-          <keep-alive>
-            <component :is="Component" />
-          </keep-alive>
-        </transition>
-      </router-view>
+      <div style="max-width: 800px; margin: 0 auto">
+        <router-view v-slot="{ Component }">
+          <transition name="fade" mode="out-in">
+            <keep-alive>
+              <component :is="Component" />
+            </keep-alive>
+          </transition>
+        </router-view>
+      </div>
     </div>
   </div>
   <div class="alive-dialog-modal" id="alive-dialog-modal"></div>

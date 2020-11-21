@@ -110,7 +110,6 @@ export default {
       if (props.handleClose !== undefined) {
         props.handleClose();
       }
-
       context.emit("update:visible", false);
     };
     const onClickOverlay = () => {
@@ -247,7 +246,7 @@ export default {
       }
       &:before {
         border-radius: 120px 0 0 120px;
-        top: -14px;
+        top: -15px;
         left: -33px;
         transform: rotate(-45deg);
         -webkit-transform-origin: 60px 60px;
