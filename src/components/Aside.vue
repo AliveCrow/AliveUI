@@ -10,20 +10,12 @@
           <h3>开始</h3>
           <ul>
             <li>
-              <router-link
-                :to="{ path: '/' }"
-                class="one_leave"
-                :class="{ selected: fullPath === '/' }"
-              >
+              <router-link :to="{ path: '/' }" class="one_leave">
                 介绍
               </router-link>
             </li>
             <li>
-              <router-link
-                :to="{ path: '/Use' }"
-                class="one_leave"
-                :class="{ selected: fullPath === '/Use' }"
-              >
+              <router-link :to="{ path: '/Use' }" class="one_leave">
                 下载与使用
               </router-link>
             </li>
@@ -65,18 +57,12 @@
             <li>
               <ul class="two_level">
                 <li>
-                  <router-link
-                    to="/Switch"
-                    class="one_leave"
-                    :class="{ selected: fullPath === '/Switch' }"
+                  <router-link to="/Switch" class="one_leave"
                     >Switch组件</router-link
                   >
                 </li>
                 <li>
-                  <router-link
-                    :to="{ path: '/Button' }"
-                    class="one_leave"
-                    :class="{ selected: fullPath === '/Button' }"
+                  <router-link :to="{ path: '/Button' }" class="one_leave"
                     >Button按钮</router-link
                   >
                 </li>
@@ -127,7 +113,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.selected {
+.router-link-exact-active {
   color: $light-color !important;
 }
 aside {
