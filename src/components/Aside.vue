@@ -86,8 +86,8 @@
                   >
                 </li>
                 <li>
-                  <router-link :to="{ path: '/' }" class="one_leave"
-                    >漂浮提示</router-link
+                  <router-link :to="{ path: '/Tab' }" class="one_leave"
+                    >Tab组件</router-link
                   >
                 </li>
               </ul>
@@ -108,7 +108,7 @@ export default {
   props: {
     fullPath: String,
   },
-  setup(props) {
+  setup(props: any) {
     const asideVisible = inject<Ref<boolean>>("asideVisible");
     const fullPath = computed({
       get: () => router.currentRoute.value.fullPath,
@@ -127,11 +127,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.selected {
+  color: $light-color !important;
+}
 aside {
   a {
     color: $color;
     transition: all 0.2s ease 0.02s;
-    display: inline-block;
+    display: inline-blocks;
     &::after {
       opacity: 0;
       width: 100%;

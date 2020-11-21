@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { provide, ref, Component } from "vue";
+import { provide, ref, Component, computed, onUpdated, watchEffect } from "vue";
 import Nav from "./components/Nav.vue";
 import Aside from "./components/Aside.vue";
 import router from "./router";
@@ -37,6 +37,7 @@ export default {
     const screenWidth = document.documentElement.clientWidth; //页面宽度
     const asideVisible = ref(screenWidth > 650);
     provide("asideVisible", asideVisible);
+
     router.afterEach((to, from) => {
       // to and from are both route objects.
       if (screenWidth < 650) {

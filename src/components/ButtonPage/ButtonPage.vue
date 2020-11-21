@@ -52,17 +52,17 @@
         <a> 按钮禁用 </a>
       </template>
       <template v-slot:description>
-        通过设置<Blod>disable</Blod>来将按钮禁用
+        通过设置<Blod>disabled</Blod>来将按钮禁用
       </template>
       <template v-slot:code>
-        <pre v-vuehighlightjs="code.disable">
+        <pre v-vuehighlightjs="code.disabled">
         <code class='html'>
-        {{code.disable}}
+        {{code.disabled}}
         </code>
         </pre>
       </template>
       <template v-slot:content>
-        <Button type="primary" disable />
+        <Button type="primary" disabled />
       </template>
     </ShowBox>
     <ShowBox>
@@ -126,7 +126,7 @@ export default {
   </Button>
 </template>
 `,
-      disable: `
+      disabled: `
   <Button type="primary" disable />
 `,
       long: `

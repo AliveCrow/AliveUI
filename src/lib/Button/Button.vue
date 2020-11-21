@@ -7,14 +7,14 @@
         [round ? ' round ' : ''] +
         [long ? ' long ' : ''] +
         [loading ? ' loading ' : ''] +
-        [disable ? ' disable ' : ''] +
+        [disabled ? ' disabled ' : ''] +
         [size ? ` ${size}` : ''] +
         [down ? ' alive-button-down ' : ' ']
       "
       :type="type"
       :icon="icon"
       :round="round"
-      :disable="disable"
+      :disabled="disabled"
       :loading="loading"
       :size="size"
       :long="long"
@@ -55,7 +55,7 @@ export default {
       type: Boolean,
       default: false,
     }, //是否圆
-    disable: Boolean, //是否禁用
+    disabled: Boolean, //是否禁用
     loading: Boolean, //加载
     size: String, //不同尺寸
     long: Boolean, //长按钮
@@ -151,7 +151,7 @@ export default {
   .long {
     width: 100%;
   }
-  .disable {
+  .disabled {
     cursor: not-allowed;
     background-color: $border-color;
     border: transparent;

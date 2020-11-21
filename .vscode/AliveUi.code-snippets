@@ -26,5 +26,18 @@
 		"body": [
 			"<pre v-vuehighlightjs='${1:默认变量}'>\n<code class='html'>\n{{${1:默认变量}}}\n</code>\n</pre>"
 		]
+	},
+	"Print to console": {
+		"scope": "vue",
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+	},
+	"setup": {
+		"scope": "vue",
+		"prefix": "setup",
+		"body": "setup(props:any,context:any) {}"
 	}
 }

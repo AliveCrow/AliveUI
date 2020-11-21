@@ -34,6 +34,11 @@ const router = createRouter({
       component: () => import('../components/DialogPage/DialogPage.vue')
     },
     {
+      path: '/Tab',
+      name: 'Tab',
+      component: () => import('../components/TabPage/TabPage.vue')
+    },
+    {
       path: '/components',
       name: 'Components',
       component: () => import('../views/Doc.vue')
