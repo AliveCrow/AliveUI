@@ -18,7 +18,6 @@
       </div>
     </div>
   </div>
-  <div class="alive-dialog-modal" id="alive-dialog-modal"></div>
 </template>
 
 <script lang="ts">

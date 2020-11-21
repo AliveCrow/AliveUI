@@ -10,7 +10,7 @@
       </template>
       <template v-slot:code>
         <pre v-vuehighlightjs="code.base">
-        <code class='html'>
+        <code class='text'>
         </code>
         </pre>
       </template>

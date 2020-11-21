@@ -55,5 +55,9 @@
 
 .is-visible{
   animation: isvible .4s forwards;
+  position: absolute;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
 }
 

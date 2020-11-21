@@ -27,7 +27,7 @@
             <span style="margin: 5px 0">常用元素</span>
             <li>
               <ul class="two_level">
-                <li>
+                <!-- <li>
                   <router-link :to="{ path: '/' }" class="one_leave"
                     >标题</router-link
                   >
@@ -46,7 +46,7 @@
                   <router-link :to="{ path: '/' }" class="one_leave"
                     >漂浮提示</router-link
                   >
-                </li>
+                </li> -->
               </ul>
             </li>
           </ul>
