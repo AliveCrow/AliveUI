@@ -1,5 +1,7 @@
 import { createWebHashHistory, createRouter } from 'vue-router'
 
+
+
 //新建history对象
 const history = createWebHashHistory()
 //新建router对象
@@ -9,12 +11,12 @@ const router = createRouter({
     {
       path: '/',
       name: 'Start',
-      component: () => import('../views/Start/Start.vue')
+      component: () => import('../views/Start.vue')
     },
     {
       path: '/Use',
       name: 'Use',
-      component: () => import('../views/Start/Use.vue')
+      component: () => import('../views/Use.vue')
     },
     {
       path: '/Switch',

@@ -8,7 +8,4 @@ declare module '*.vue' {
 
 declare module 'vue3-highlightjs';
 
-declare module 'highlight.js' {
-    const hljs: HLJSApi
-    export default hljs
-}
+declare module 'highlight.js' 

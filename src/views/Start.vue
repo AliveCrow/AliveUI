@@ -1,5 +1,5 @@
 <template>
-  <div class="start_app">
+  <div class="start_app" id="write">
     <div class="title">
       <h1>开始</h1>
       <span>欢迎使用AliveUI</span>

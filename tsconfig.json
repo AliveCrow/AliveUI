@@ -12,7 +12,7 @@
     "./**/*.ts",
     "./**/*.tsx",
     "./**/*.vue",
-    "src/utils/vue3-hightlight.ts"
+    "src/utils/vue3-hightlight.ts", "src/plugins/auto-router.ts"
   ],
   "exclude": [
     "node_modules"

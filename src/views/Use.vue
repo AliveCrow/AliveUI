@@ -1,8 +1,9 @@
 <template>
-  <article class="markdown-body">
+  <article id="write">
     <h1>Unicorns</h1>
-    <p>All the things</p>
-    <pre><code>121321</code></pre>
+    <p>All the things === 不是啊吧</p>
+    <pre v-vuehighlightjs="'<div>123</div>'"><code >
+    </code></pre>
   </article>
 </template>
 <script>
