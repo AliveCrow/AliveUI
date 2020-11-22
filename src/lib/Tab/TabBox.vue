@@ -1,6 +1,5 @@
 <template>
   <slot></slot>
-  {{ disabled }}
 </template>
 <script lang='ts'>
 import { onMounted, watchEffect } from "vue";

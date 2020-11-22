@@ -14,9 +14,9 @@
             </svg>
           </div>
         </div>
-        <header class="alive-dialog-header" v-if="!noTitle">
+        <header class="alive-dialog-header"  v-if="title">
           <h2 class="alive-dialog-title">
-            <slot name="title">title</slot>
+            {{title}}
           </h2>
         </header>
         <main class="alive-dialog-main">
@@ -42,20 +42,20 @@
             class="alive-dialog-icon alive-dialog-error"
             v-else-if="icon === 'error'"
           >
-            <span class="errorAni" style="">
+            <span class="errorAni" >
               <span class="alive-dialog-line left"></span>
               <span class="alive-dialog-line right"></span>
             </span>
           </div>
-          <slot name="content" v-if="!noContent">这是内容</slot>
+          <slot  >这是内容</slot>
         </main>
-        <footer class="alive-dialog-footer" v-if="!noFooter">
+        <footer class="alive-dialog-footer" v-if="bottomBtn">
           <div
             class="alive-dialog-button"
             @click="closeDialog"
             :style="['background-color:' + btnColor]"
           >
-            <slot name="footer" style="color: #fff">关闭</slot>
+            {{bottomBtn}}
           </div>
         </footer>
       </div>
@@ -81,19 +81,19 @@ export default {
     },
     center: {
       type: Boolean,
-      default: false,
+      default: true,
     },
-    noTitle: {
-      type: Boolean,
-      default: false,
+    title: {
+      type: String || null,
+      default: null,
     },
     noContent: {
       type: Boolean,
       default: false,
     },
-    noFooter: {
-      type: Boolean,
-      default: false,
+    bottomBtn: {
+      type: String || null,
+      default: null,
     },
     handleClose: {
       type: Function,
@@ -187,7 +187,7 @@ export default {
     }
   }
   .alive-dialog-main {
-    padding: 64px 32px 32px;
+    padding: 64px 32px;
     .alive-dialog-icon {
       position: relative;
       width: 80px;

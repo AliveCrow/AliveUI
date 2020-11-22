@@ -1,56 +1,34 @@
 <template>
   <div class="content">
     <span> Dialog对话框组件 </span>
-    <ShowBox>
-      <template v-slot:title>基本用法</template>
-      <template v-slot:description> Dialog 弹出一个对话框 </template>
-      <template v-slot:code> </template>
-      <template v-slot:content>
-        <Button @click="toggleDialog" type="error">Success</Button>
-        <Button @click="toggleDialog" type="success">是</Button>
-        <Button type="warning" @click="openDialog">dakai</Button>
-      </template>
-    </ShowBox>
-    <Dialog v-model:visible="visibleDialog" icon="success" :handleClose="close">
-    </Dialog>
+    <SourceCode :component="DialogDefault" ></SourceCode>
+    <SourceCode :component="DialogCenter"></SourceCode>
+    <SourceCode :component="DialogTitle"></SourceCode>
+    <SourceCode :component="DialogType"></SourceCode>
+<!--    <ShowBox>-->
+<!--      <template v-slot:title>基本用法</template>-->
+<!--      <template v-slot:description> Dialog 弹出一个对话框 </template>-->
+<!--      <template v-slot:code> </template>-->
+<!--      <template v-slot:content>-->
+<!--        <Button @click="toggleDialog" type="error">Success</Button>-->
+<!--        <Button @click="toggleDialog" type="success">是</Button>-->
+<!--        <Button type="warning" @click="openDialog">dakai</Button>-->
+<!--      </template>-->
+<!--    </ShowBox>-->
   </div>
 </template>
 <script lang='ts'>
-import Dialog from "../../lib/Dialog/Dialog.vue";
-import Button from "../../lib/Button/Button.vue";
 import { ref } from "vue";
-import { $Dialog } from "../../utils/openDialog";
-
+import DialogDefault from './DialogShowComponents/DialogDefault.vue';
+import DialogTitle from './DialogShowComponents/DialogTitle.vue';
+import DialogType from './DialogShowComponents/DialogType.vue';
+import DialogCenter from './DialogShowComponents/DialogCenter.vue';
 export default {
-  components: { Dialog, Button },
-
   setup() {
-    const visibleDialog = ref(false);
-    const toggleDialog = () => {
-      visibleDialog.value = !visibleDialog.value;
-    };
-    const close = () => {
-      console.log("close");
-    };
-    const openDialog = () => {
-      $Dialog({
-        title: "title",
-        content: "title",
-        icon: "success",
-        noFooter: true,
-        noContent: true,
-        noTitle: true,
-        handleClose: () => {
-          console.log("handleClose");
-        },
-      });
-    };
-
     return {
-      visibleDialog,
-      toggleDialog,
-      close,
-      openDialog,
+      DialogDefault,
+      DialogTitle,
+      DialogType,DialogCenter
     };
   },
 };

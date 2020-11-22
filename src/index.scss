@@ -13,7 +13,7 @@ html,body{
     color: #fff;
   }
   &::-webkit-scrollbar {
-    width: 0px;
+    width: 0;
   }
 
 }
@@ -51,7 +51,12 @@ a {
     transition: all 0.2s ease 0.02s;
   }
 }
-
+.description {
+  span {
+    color: red !important;
+    font-weight:600;
+  }
+}
 
 .hidden {
   display: none;

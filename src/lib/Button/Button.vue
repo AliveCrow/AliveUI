@@ -52,7 +52,10 @@ export default {
   name: "Button",
   props: {
     content: String, //内容
-    type: String, //主题
+    type: {
+      type:String,
+      default: 'default'
+    }, //主题
     icon: String, //图标
     round: {
       type: Boolean,
@@ -83,6 +86,7 @@ export default {
 };
 </script>
 <style lang='scss'>
+
 .alive-button__container {
   display: inline-block;
   .alive-button-svg {
@@ -99,7 +103,6 @@ export default {
     border-radius: 2px;
     transition: all 0.3s linear;
     .alive-button-font {
-      color: #fff;
       transition: all 0.3s linear;
       font-size: 14px;
     }
@@ -107,6 +110,9 @@ export default {
       box-shadow: 0 1px 6px rgba($logo-color, 0.7);
       transform: translateY(-1px);
     }
+  }
+  .default{
+    color: #color;
   }
   .primary {
     background-color: $primary;

@@ -15,13 +15,15 @@ module.exports = {
 		sourceCode: (options) => {
 			const { code, path } = options
 			const file = fs.readFileSync(path).toString()
-			const parsed = baseParse(file)
-			const title = parsed.children[0].content
+			const parsed = baseParse(file).children.find(n => n.tag === 'sourceCode')
+			const title = parsed.children[0]
+			const description = parsed.children[1]
 			const main = file.split(parsed.loc.source).join('').trim()
 			return `export default function (Component) {
-        Component.__sourceCode = ${JSON.stringify(file)
-				}
-      }`.trim()
+				Component.__sourceCode = ${JSON.stringify(main)};
+				Component.__title = ${JSON.stringify(title)}
+				Component.__description = ${JSON.stringify(description)}
+	}`.trim()
 		}
 	},
 	// alias: {
@@ -32,7 +34,7 @@ module.exports = {
 	cssPreprocessOptions: {
 		scss: {
 			//设置公共变量
-			additionalData: `@import "./src/lib/var.scss";`,
+			additionalData: `@import "./src/lib/var.scss"; `,
 		}
 	},
 

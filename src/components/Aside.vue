@@ -6,77 +6,13 @@
     </label>
     <div class="aside_content">
       <ul class="">
-        <li>
-          <h3>开始</h3>
-          <ul>
-            <li>
-              <router-link :to="{ path: '/' }" class="one_leave">
-                介绍
+        <li v-for="item in asideData">
+          <h3>{{item.name}}</h3>
+          <ul class="two_level">
+            <li v-for="content in item.children ">
+              <router-link :to="{ path: `${content.path}` }"  class="one_leave">
+                {{content.name}}
               </router-link>
-            </li>
-            <li>
-              <router-link :to="{ path: '/Use' }" class="one_leave">
-                下载与使用
-              </router-link>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h3>样式</h3>
-          <ul>
-            <span style="margin: 5px 0">常用元素</span>
-            <li>
-              <ul class="two_level">
-                <!-- <li>
-                  <router-link :to="{ path: '/' }" class="one_leave"
-                    >标题</router-link
-                  >
-                </li>
-                <li>
-                  <router-link :to="{ path: '/' }" class="one_leave"
-                    >文字</router-link
-                  >
-                </li>
-                <li>
-                  <router-link :to="{ path: '/' }" class="one_leave"
-                    >按钮</router-link
-                  >
-                </li>
-                <li>
-                  <router-link :to="{ path: '/' }" class="one_leave"
-                    >漂浮提示</router-link
-                  >
-                </li> -->
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h3>组件</h3>
-          <ul>
-            <li>
-              <ul class="two_level">
-                <li>
-                  <router-link to="/Switch" class="one_leave"
-                    >Switch组件</router-link
-                  >
-                </li>
-                <li>
-                  <router-link :to="{ path: '/Button' }" class="one_leave"
-                    >Button按钮</router-link
-                  >
-                </li>
-                <li>
-                  <router-link :to="{ path: '/Dialog' }" class="one_leave"
-                    >Dialog弹出框</router-link
-                  >
-                </li>
-                <li>
-                  <router-link :to="{ path: '/Tab' }" class="one_leave"
-                    >Tab组件</router-link
-                  >
-                </li>
-              </ul>
             </li>
           </ul>
         </li>
@@ -88,6 +24,7 @@
 <script lang="ts">
 import { inject, Ref, onMounted, computed } from "vue";
 import router from "../router/index";
+import {AsideData} from '../Doc/AsideData'
 
 export default {
   name: "Aside",
@@ -95,6 +32,8 @@ export default {
     fullPath: String,
   },
   setup(props: any) {
+    const asideData = AsideData()
+    console.log(asideData);
     const asideVisible = inject<Ref<boolean>>("asideVisible");
     const fullPath = computed({
       get: () => router.currentRoute.value.fullPath,
@@ -107,6 +46,7 @@ export default {
     }
     return {
       fullPath,
+      asideData
     };
   },
 };

@@ -65,6 +65,7 @@ export default {
     }
 
     .code-show {
+      background-color: #f6f6f6;
       border: none;
       max-height: 800px;
       width: 100%;
@@ -93,6 +94,7 @@ export default {
       width: 100%;
       overflow-y: auto;
       border-top: 1px solid $color;
+      background-color: #f6f6f6;
     }
     .content {
       padding: 20px;

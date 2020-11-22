@@ -18,15 +18,19 @@ hue-6-2: #c18401
 
 */
 
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  src: local('Fira Code'), url('../../lib/maize/FiraCode-Regular.ttf') format('ttf');
+}
+
 [class^="hljs-"],[class*=" hljs-"],.hljs{
-  font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
+  font-family:'Fira Code',Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
   font-size: 1.05rem;
 }
-.code{
-  background:   #eee;
-  padding-bottom: -200px;
+code{
   &::-webkit-scrollbar {
-    width: 0px;
+    height: 6px!important;
   }
   &::-webkit-scrollbar-thumb{
     background-color: $light-color;
@@ -41,7 +45,6 @@ hue-6-2: #c18401
   overflow-x: auto;
   padding: 0.5em;
   color: #383a42;
-  background:   #eee;
 }
 
 .hljs-comment,
