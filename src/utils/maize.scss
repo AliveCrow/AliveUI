@@ -7,7 +7,7 @@
 
 /* 全局属性 */
 :root{
-  --select-text-bg-color: #e49123;
+  --select-text-bg-color: $light-color;
   --bg-color:  #fafafa;                   /*change background*/
   --text-color: #333333;                  /*change text color*/
   --md-char-color: #C7C5C5;               /*change color of meta characetrs like `*` in markdown */
@@ -90,7 +90,7 @@
 #write h2::before{
   content: "✔";
   font-weight: bold;
-  color: #ffb11b;
+  color: $light-color;
   margin-right: 4px
 }
 #write h2 {
@@ -144,7 +144,7 @@
 } */
 
 #write strong {
-  color: #E49123;
+  color: $light-color;
   font-weight: bold;
 }
 
@@ -172,8 +172,24 @@
 #write a {
   text-decoration: none;
   font-weight: bold;
-  color: #E49123;
-  border-bottom: 1px solid #E49123;
+  color: $light-color;
+  cursor: pointer !important;
+  line-height: normal!important;
+  display: inline-block;
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: $light-color;
+    transition: all 0.2s ease 0.02s;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+
 }
 
 /* 分割线 */
@@ -240,7 +256,7 @@
 /* 上角标 */
 #write .md-footnote {
  font-weight: bold;
- color: #E49123;
+ color: $light-color;
 }
 #write .md-footnote > .md-text:before {
  content: '['

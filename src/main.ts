@@ -1,7 +1,7 @@
 
 import './index.scss'
 import './lib/alive.scss'
-import './utils/maize.css'
+import './utils/maize.scss'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'

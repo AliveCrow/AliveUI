@@ -1,14 +1,14 @@
 <template>
-  <article id="write">
-    <h1>Unicorns</h1>
-    <p>All the things === 不是啊吧</p>
-    <pre v-vuehighlightjs="'<div>123</div>'"><code >
-    </code></pre>
-  </article>
+  <div id="write" v-html="Use"></div>
 </template>
 <script>
 import { onMounted } from "vue";
+import Use from "../Doc/Use.md";
 export default {
-  setup(props, context) {},
+  setup(props, context) {
+    return {
+      Use,
+    };
+  },
 };
 </script>

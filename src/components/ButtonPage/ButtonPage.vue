@@ -1,3 +1,4 @@
+
 <template>
   <div class="content">
     <span> Button按钮组件 </span>
@@ -104,11 +105,13 @@
   </div>
 </template>
 <script>
-import Button from "/@/lib/Button/Button.vue";
+import Button from "../../lib/Button/Button.vue";
+
 export default {
   components: {
     Button,
   },
+
   setup() {
     const code = {
       base: `

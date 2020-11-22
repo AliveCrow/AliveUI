@@ -1,3 +1,6 @@
+<sourceCode>
+常规用法
+</sourceCode>
 <template>
   <div class="alive-button__container">
     <button

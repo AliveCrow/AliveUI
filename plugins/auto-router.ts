@@ -1,7 +1,7 @@
 //@ts-nocheck
-const fs = require('fs')
 const virtual = require('@rollup/plugin-virtual')
 
+import fs from 'fs'
 function pageDir(pageDirPath = './src/views') {
   const files = fs
     .readdirSync('./src/views')
@@ -22,10 +22,12 @@ function pageDir(pageDirPath = './src/views') {
   return { imports, routes }
 }
 // export const autoRouters = 
+
 export function autoRouters() {
   const { imports, routes } = pageDir()
 
-  const moduleContent = `
+  const moduleContent =
+    `
     ${imports.join('\n')}
     export const routes = [${routes.join(', \n')}]
   `
@@ -33,10 +35,10 @@ export function autoRouters() {
   const configureServer = [
     async ({ app }) => {
       app.use(async (ctx, next) => {
-        console.log(ctx.path);
-        if (ctx.path.startsWith('/@modules/auto-router')) {
+
+        if (ctx.path.startsWith('/@/router/vue-auto-router')) {
           ctx.type = 'js'
-          ctx.body = () => { console.log('233') }
+          ctx.body = moduleContent
         } else {
           await next()
         }
@@ -45,7 +47,7 @@ export function autoRouters() {
   ]
 
   // const rollupInputOptions = {
-  //   plugins: [virtual({ 'vue-auto-routes': moduleContent })],
+  //   plugins: [virtual({ 'auto-router': moduleContent })],
   // }
 
   // const vueCustomBlockTransforms = {

@@ -1,42 +1,16 @@
 <template>
-  <div class="start_app" id="write">
-    <div class="title">
-      <h1>开始</h1>
-      <span>欢迎使用AliveUI</span>
-    </div>
-    <div class="content">
-      <span>介绍</span>
-      <p>
-        AliveUI是一个简洁的前端UI框架,使用
-        <Blod color="rgb(255, 79, 87)"> vite+vue3.0+typescript </Blod>
-        搭建,由
-        <Blod color="rgb(255, 79, 87)">
-          <a
-            target="_blank"
-            href="https://dreamsakula.top/"
-            style="color: rgb(255, 79, 87)"
-            >Grit</a
-          >
-        </Blod>
-        开发
-      </p>
-      <ul>
-        <li>最新版本:1.0.0</li>
-        <li>上次更新:暂无</li>
-        <li>上次修正:暂无</li>
-      </ul>
-    </div>
-    <div class="footer">
-      <a class="prev">上一篇</a>
-      <a class="next">下一篇</a>
-    </div>
-  </div>
+  <div id="write" v-html="Start"></div>
 </template>
 
-<script>
-import { onMounted } from "vue";
+<script lang='ts'>
+import { onMounted, ref } from "vue";
+import Start from "../Doc/Start.md";
 export default {
-  setup(props, context) {},
+  setup(props, context) {
+    return {
+      Start,
+    };
+  },
 };
 </script>
 

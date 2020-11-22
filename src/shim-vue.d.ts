@@ -5,6 +5,7 @@ declare module '*.vue' {
     export default componentOptions
 }
 
+declare module "*.md";
 
 declare module 'vue3-highlightjs';
 
