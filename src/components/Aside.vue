@@ -1,20 +1,32 @@
 <template>
   <aside class="aside_show">
-    <img src="../assets/logo.png" alt="" class="logo" width="121" />
-    <label>
-      <input type="text" class="search" />
+    <img src="../assets/logo.png" alt="" class="logo" width="121"/>
+    <label style="position: relative">
+      <input type="text" class="search" v-model="keyword" />
+      <svg class="icon" aria-hidden="true" @click="clearKeyword">
+        <use xlink:href="#iconclose-outline"></use>
+      </svg>
     </label>
-    <div class="aside_content">
-      <ul class="">
+    <div class="aside_content" v-if="keyword===''" >
+      <ul>
         <li v-for="item in asideData">
-          <h3>{{item.name}}</h3>
+          <h3>{{ item.name }}</h3>
           <ul class="two_level">
-            <li v-for="content in item.children ">
-              <router-link :to="{ path: `${content.path}` }"  class="one_leave">
-                {{content.name}}
+            <li v-for="content in item.children">
+              <router-link :to="{ path: `${content.path}` }" class="one_leave">
+                {{ content.name }}
               </router-link>
             </li>
           </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="aside_content " v-else>
+      <ul class="two_level search-res">
+        <li v-for="content in arr">
+          <router-link :to="{ path: `${content.path}` }" class="one_leave">
+            {{ content.name }}
+          </router-link>
         </li>
       </ul>
     </div>
@@ -22,33 +34,56 @@
 </template>
 
 <script lang="ts">
-import { inject, Ref, onMounted, computed } from "vue";
-import router from "../router/index";
-import {AsideData} from '../Doc/AsideData'
+import {
+  inject,
+  watchEffect,
+  onMounted,
+  computed,
+  ref,
+  reactive,
+  toRefs
+} from 'vue';
+import {AsideData} from '../Doc/AsideData';
 
 export default {
-  name: "Aside",
+  name: 'Aside',
   props: {
-    fullPath: String,
+    fullPath: String
   },
   setup(props: any) {
-    const asideData = AsideData()
-    console.log(asideData);
-    const asideVisible = inject<Ref<boolean>>("asideVisible");
-    const fullPath = computed({
-      get: () => router.currentRoute.value.fullPath,
-      set: (val) => {
-        return val;
-      },
+    let a: { name: string; path: string }[] = [];
+    const keyword = ref('');
+    let asideData = reactive(AsideData());
+    let arr = ref<{ name: string; path: string }[]>([])
+    AsideData().forEach((i) => {
+      i.children.forEach((item) => {
+        a.push(item);
+      });
     });
-    onMounted: {
-      fullPath.value = router.currentRoute.value.fullPath;
+
+    const searchResult = computed({
+      get: () => a,
+      set: val => {
+        arr.value = val;
+      }
+    });
+    const clearKeyword=()=>{
+      keyword.value = ''
     }
+    watchEffect(() => {
+      searchResult.value = a.filter(
+          (item) => item.name.indexOf(keyword.value) !== -1
+      );
+    });
+
     return {
-      fullPath,
-      asideData
+      asideData,
+      keyword,
+      searchResult,
+      arr,
+      clearKeyword
     };
-  },
+  }
 };
 </script>
 
@@ -56,20 +91,24 @@ export default {
 .router-link-exact-active {
   color: $light-color !important;
 }
+
 aside {
   a {
     color: $color;
     transition: all 0.2s ease 0.02s;
     display: inline-blocks;
+
     &::after {
       opacity: 0;
       width: 100%;
     }
+
     &:focus {
       color: $light-color;
       transition: all 0.2s ease 0.02s;
     }
   }
+
   height: 100vh;
   min-width: 260px;
   overflow-y: auto;
@@ -101,7 +140,20 @@ aside {
     width: 50px;
     margin: 20px auto;
   }
-
+  .icon{
+    position: absolute;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    margin:5px 5px;
+    fill:rgba($color,.2);
+    border-radius: 50%;
+    transition: all .15s;
+    &:hover{
+      background-color: rgba($color,.2);
+      fill: #fff;
+    }
+  }
   .search {
     height: 30px;
     width: 200px;
@@ -114,10 +166,11 @@ aside {
       border-color: $light-color;
     }
   }
-
   .aside_content {
     text-align: left;
-
+    &>.search-res{
+      padding-top: 20px;
+    }
     h3 {
       margin: 20px 0;
     }
@@ -148,6 +201,7 @@ aside {
   aside {
     position: absolute;
     z-index: 90;
+
     .logo {
       display: none !important;
     }
