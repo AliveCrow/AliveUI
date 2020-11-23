@@ -1,15 +1,15 @@
 <template>
   <div class="alive-tab alive-tab-nav" ref="NavBar">
     <div
-        v-for="cNode in cNodes"
-        :key="cNode.props.title"
-        @click="[cNode.props.disabled === '' ? '' : selecteTab(cNode)]"
-        :class="
+      v-for="cNode in cNodes"
+      :key="cNode.props.title"
+      @click="[cNode.props.disabled === '' ? '' : selecteTab(cNode)]"
+      :class="
         'alive-tab-nav_item' +
         [currentTab === cNode ? ' selected ' : ''] +
         [cNode.props.disabled === '' ? ' disabled' : '']
       "
-        :ref="
+      :ref="
         //@ts-ignore
         (el) => {
           if (currentTab === cNode) selectedTab = el;
@@ -19,24 +19,22 @@
       {{ cNode.props.title }}
     </div>
     <div
-        class="alive-tab-nav_slide"
-        :style="{ width: TabBarWidth, left: TabBarPosition }"
+      class="alive-tab-nav_slide"
+      :style="{ width: TabBarWidth, left: TabBarPosition }"
     ></div>
   </div>
 
-    <transition name="fade" mode="out-in">
-      <div :key="currentTab.props.title">
+  <transition name="fade" mode="out-in">
+    <div :key="currentTab.props.title">
       <keep-alive>
         <component
-            :is="currentTab"
-            :key="currentTab.props.title"
-            ref="currentComponent"
+          :is="currentTab"
+          :key="currentTab.props.title"
+          ref="currentComponent"
         ></component>
       </keep-alive>
-      </div>
-    </transition>
-
-
+    </div>
+  </transition>
 </template>
 <script lang="ts">
 import TabBox from "./TabBox.vue";
@@ -102,6 +100,7 @@ export default {
 };
 </script>
 <style lang="scss">
+
 .alive-tab {
   height: 40px;
   font-size: 1rem;

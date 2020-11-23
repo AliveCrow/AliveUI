@@ -4,9 +4,7 @@
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "sourceMap": true,
+    "moduleResolution": "node"
   },
   "include": [
     "./**/*.ts",

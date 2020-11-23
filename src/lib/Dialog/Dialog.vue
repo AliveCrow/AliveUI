@@ -125,6 +125,7 @@ export default {
 };
 </script>
 <style lang='scss'>
+
 .alive-dialog-overlay {
   position: fixed;
   z-index: 91;

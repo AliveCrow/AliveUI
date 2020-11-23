@@ -11,14 +11,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12ab8f7e-77f9-474e-b275-4b00b6b9039f" name="默认更改列表" comment="aside样式,手机端">
+      <change afterPath="$PROJECT_DIR$/rollup.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Var/Var.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/ShowBox.code-snippets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doc/Start.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doc/Start.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/_theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_theme.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ButtonPage/ButtonPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonPage/ButtonPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ShowBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ShowBox.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SwitchPage/SwitchPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SwitchPage/SwitchPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Button/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Button/Button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Card/Card.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Dialog/Dialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Dialog/Dialog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Switch/Switch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Switch/Switch.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Tab/TabBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Tab/TabBox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Tab/Tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Tab/Tabs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/alive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/alive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/maize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/maize.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/maize/FiraCode-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/maize/FiraCode-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/maize/FiraCode-Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/maize/FiraCode-Light.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/maize/FiraCode-Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/maize/FiraCode-Medium.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/maize/FiraCode-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/maize/FiraCode-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/maize/FiraCode-Retina.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/maize/FiraCode-Retina.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shim-vue.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shim-vue.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/openDialog.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/openDialog.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,10 +63,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.16.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="10.17.45" />
+    <property name="javascript.nodejs.core.library.configured.version" value="15.2.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.9" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -70,6 +86,9 @@
       <workItem from="1605663989599" duration="2221000" />
       <workItem from="1605687021987" duration="1790000" />
       <workItem from="1605794316309" duration="77000" />
+      <workItem from="1606150633484" duration="377000" />
+      <workItem from="1606152911564" duration="157000" />
+      <workItem from="1606158186865" duration="1462000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1605583165202</created>
@@ -111,14 +130,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/src/main.js.map" />
-        <option value="$PROJECT_DIR$/src/main.js" />
-        <option value="$PROJECT_DIR$/src/router/index.js" />
-        <option value="$PROJECT_DIR$/src/router/index.js.map" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -150,9 +161,26 @@
       <screen x="-1920" y="25" width="1920" height="998" />
     </state>
     <state x="-1107" y="216" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605610144240" />
-    <state x="-1439" y="72" key="SettingsEditor" timestamp="1605664154821">
-      <screen x="-1920" y="25" width="1920" height="998" />
+    <state width="1853" height="254" key="GridCell.Tab.0.bottom" timestamp="1606150951204">
+      <screen x="-1920" y="25" width="1920" height="996" />
     </state>
+    <state width="1853" height="254" key="GridCell.Tab.0.bottom/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606150951204" />
+    <state width="1853" height="254" key="GridCell.Tab.0.center" timestamp="1606150951203">
+      <screen x="-1920" y="25" width="1920" height="996" />
+    </state>
+    <state width="1853" height="254" key="GridCell.Tab.0.center/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606150951203" />
+    <state width="1853" height="254" key="GridCell.Tab.0.left" timestamp="1606150951202">
+      <screen x="-1920" y="25" width="1920" height="996" />
+    </state>
+    <state width="1853" height="254" key="GridCell.Tab.0.left/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606150951202" />
+    <state width="1853" height="254" key="GridCell.Tab.0.right" timestamp="1606150951203">
+      <screen x="-1920" y="25" width="1920" height="996" />
+    </state>
+    <state width="1853" height="254" key="GridCell.Tab.0.right/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606150951203" />
+    <state x="-1348" y="39" key="SettingsEditor" timestamp="1606150945632">
+      <screen x="-1920" y="25" width="1920" height="996" />
+    </state>
+    <state x="-1348" y="39" key="SettingsEditor/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606150945632" />
     <state x="-1439" y="72" key="SettingsEditor/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605664154821" />
     <state x="-1458" y="197" key="Vcs.Push.Dialog.v2" timestamp="1605619429138">
       <screen x="-1920" y="25" width="1920" height="998" />

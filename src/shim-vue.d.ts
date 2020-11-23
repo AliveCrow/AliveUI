@@ -9,4 +9,7 @@ declare module "*.md";
 
 declare module 'vue3-highlightjs';
 
-declare module 'highlight.js' 
+declare module 'highlight.js'
+
+declare module 'rollup-plugin-scss'
+declare module 'sass'

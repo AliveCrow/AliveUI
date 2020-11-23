@@ -53,8 +53,8 @@ export default {
   props: {
     content: String, //内容
     type: {
-      type:String,
-      default: 'default'
+      type: String,
+      default: "default",
     }, //主题
     icon: String, //图标
     round: {
@@ -67,7 +67,7 @@ export default {
     long: Boolean, //长按钮
   },
 
-  setup(props, context) {
+  setup(props: any, context: any) {
     // const { ...rest } = context.attrs;
     // return { rest };
     const down = ref(false);
@@ -86,6 +86,7 @@ export default {
 };
 </script>
 <style lang='scss'>
+
 
 .alive-button__container {
   display: inline-block;
@@ -111,8 +112,8 @@ export default {
       transform: translateY(-1px);
     }
   }
-  .default{
-    color: #color;
+  .default {
+    color: $color;
   }
   .primary {
     background-color: $primary;

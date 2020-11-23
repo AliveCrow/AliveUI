@@ -30,7 +30,7 @@ export default {
     trueColor: String,
     falseColor: String,
   },
-  setup(props, context) {
+  setup(props: { value: any; }, context: { emit: (arg0: string, arg1: boolean) => void; }) {
     const toggleSwitch = () => {
       context.emit("update:value", !props.value);
     };
@@ -41,6 +41,7 @@ export default {
 };
 </script>
 <style  lang='scss'>
+
 .alive-false {
   background-color: $error;
 }

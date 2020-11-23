@@ -1,5 +1,5 @@
 import { createApp, h } from 'vue'
-import Dialog from '../lib/Dialog/Dialog.vue';
+import Dialog from './Dialog/Dialog.vue';
 
 export const $Dialog = (options: any) => {
   const { clickOverlay,

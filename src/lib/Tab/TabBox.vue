@@ -13,7 +13,7 @@ export default {
       default: false,
     },
   },
-  setup(props, context) {},
+  setup() {},
 };
 </script>
 <style lang='scss'>

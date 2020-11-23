@@ -1,12 +1,12 @@
 # 开始
 
-欢迎使用AliveUI
+欢迎使用GritUI
 
 ---
 
 ## 介绍
 
-AliveUI是一个简洁的前端UI框架,基于vue3.0的开源UI组件库, 使用`vite` `vue3.0` `typescript`搭建, 由[Grit](https://dreamsakula.top/)开发, 如果你不满框架原生样式, 不必担心类名命名的问题，覆盖样式也是可以的, 同时AliveUI还支持`移动端`显示
+GritUI是一个简洁的前端UI框架,基于vue3.0的开源UI组件库, 使用`vite` `vue3.0` `typescript`搭建, 由[Grit](https://dreamsakula.top/)开发, 如果你不满框架原生样式, 不必担心类名命名的问题，覆盖样式也是可以的, 同时GritUI还支持`移动端`显示
 
 
 
