@@ -14,9 +14,9 @@
             </svg>
           </div>
         </div>
-        <header class="alive-dialog-header"  v-if="title">
+        <header class="alive-dialog-header" v-if="title">
           <h2 class="alive-dialog-title">
-            {{title}}
+            {{ title }}
           </h2>
         </header>
         <main class="alive-dialog-main">
@@ -42,12 +42,12 @@
             class="alive-dialog-icon alive-dialog-error"
             v-else-if="icon === 'error'"
           >
-            <span class="errorAni" >
+            <span class="errorAni">
               <span class="alive-dialog-line left"></span>
               <span class="alive-dialog-line right"></span>
             </span>
           </div>
-          <slot  >这是内容</slot>
+          <slot>这是内容</slot>
         </main>
         <footer class="alive-dialog-footer" v-if="bottomBtn">
           <div
@@ -55,7 +55,7 @@
             @click="closeDialog"
             :style="['background-color:' + btnColor]"
           >
-            {{bottomBtn}}
+            {{ bottomBtn }}
           </div>
         </footer>
       </div>
@@ -125,7 +125,21 @@ export default {
 };
 </script>
 <style lang='scss'>
-
+@keyframes isvible{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.is-visible{
+  animation: isvible .4s forwards;
+  position: absolute;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+}
 .alive-dialog-overlay {
   position: fixed;
   z-index: 91;
@@ -224,6 +238,55 @@ export default {
         transform: rotate(-45deg);
         animation: animateSuccessTwo 0.75s;
       }
+      @keyframes animateSuccessOne {
+        0% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        54% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        70% {
+          width: 50px;
+          left: -8px;
+          top: 37px;
+        }
+        84% {
+          width: 17px;
+          left: 21px;
+          top: 48px;
+        }
+        100% {
+          width: 25px;
+          left: 13px;
+          top: 46px;
+        }
+      }
+      @keyframes animateSuccessTwo {
+        0% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        65% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        84% {
+          width: 55px;
+          right: 0px;
+          top: 35px;
+        }
+        100% {
+          width: 47px;
+          right: 7px;
+          top: 38px;
+        }
+      }
       .alive-dialog-placeholder {
         box-sizing: content-box;
         position: absolute;
@@ -262,6 +325,20 @@ export default {
         transform-origin: 0px 60px;
         animation: rotatePlaceholder 4.25s ease-in;
       }
+      @keyframes rotatePlaceholder {
+        0% {
+          transform: rotate(-45deg);
+        }
+        5% {
+          transform: rotate(-45deg);
+        }
+        12% {
+          transform: rotate(-405deg);
+        }
+        100% {
+          transform: rotate(-405deg);
+        }
+      }
     }
     .alive-dialog-warning {
       margin-bottom: 36px;
@@ -289,6 +366,14 @@ export default {
       .warningAni {
         animation: warning 0.75s infinite alternate;
       }
+      @keyframes warning {
+        0% {
+          background-color: $warning;
+        }
+        100% {
+          background-color: rgba($warning, 0.4);
+        }
+      }
     }
     .alive-dialog-error {
       margin-bottom: 36px;
@@ -314,6 +399,27 @@ export default {
         position: relative;
         display: block;
         animation: errorAni 0.8s forwards;
+      }
+      @keyframes errorAni {
+        0% {
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        50% {
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        80% {
+          transform: scale(1.15);
+          margin-top: -6px;
+        }
+        100% {
+          transform: scale(1);
+          margin-top: 0;
+          opacity: 1;
+        }
       }
     }
   }

@@ -38,7 +38,6 @@
 </template>
 <script lang="ts">
 import TabBox from "./TabBox.vue";
-
 import {
   getCurrentInstance,
   onMounted,
@@ -100,7 +99,6 @@ export default {
 };
 </script>
 <style lang="scss">
-
 .alive-tab {
   height: 40px;
   font-size: 1rem;

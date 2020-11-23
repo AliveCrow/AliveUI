@@ -86,8 +86,6 @@ export default {
 };
 </script>
 <style lang='scss'>
-
-
 .alive-button__container {
   display: inline-block;
   .alive-button-svg {

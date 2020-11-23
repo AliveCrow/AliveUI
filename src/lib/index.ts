@@ -1,7 +1,5 @@
 import './alive.scss';
-import './_var.scss';
-import './_animate.scss';
-import './maize.scss';
+import './svg.js';
 export { default as Switch } from './Switch/Switch.vue';
 export { default as Button } from './Button/Button.vue';
 export { default as Tabs } from './Tab/Tabs.vue';

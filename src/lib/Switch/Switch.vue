@@ -30,7 +30,10 @@ export default {
     trueColor: String,
     falseColor: String,
   },
-  setup(props: { value: any; }, context: { emit: (arg0: string, arg1: boolean) => void; }) {
+  setup(
+    props: { value: any },
+    context: { emit: (arg0: string, arg1: boolean) => void }
+  ) {
     const toggleSwitch = () => {
       context.emit("update:value", !props.value);
     };
@@ -41,7 +44,6 @@ export default {
 };
 </script>
 <style  lang='scss'>
-
 .alive-false {
   background-color: $error;
 }
@@ -83,9 +85,9 @@ export default {
       border: 2px solid red;
       border-color: #fff $light-color $light-color #fff;
       background-color: transparent;
-      animation: switch-rotate 1s linear infinite;
+      animation: switchRotate 1s linear infinite;
     }
-    @keyframes switch-rotate {
+    @keyframes switchRotate {
       0% {
         transform: translate(-50%, -50%) rotate(0deg);
       }

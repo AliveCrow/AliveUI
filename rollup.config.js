@@ -14,14 +14,9 @@ export default {
 		file: 'package/lib/GritUI.js',
 		format: 'umd',
 		plugins: [terser()]
-	}, {
-		name: 'GritUI',
-		file: 'package/lib/GritUI.esm.js',
-		format: 'es',
-		plugins: [terser()]
 	}],
 	plugins: [
-		scss({ include: /\.scss$/,sass: dartSass }),
+		scss({ include: /\.scss$/, sass: dartSass }),
 		esbuild({
 			include: /\.[jt]s?$/,
 			minify: process.env.NODE_ENV === 'production',
