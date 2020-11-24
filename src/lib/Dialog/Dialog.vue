@@ -47,7 +47,7 @@
               <span class="alive-dialog-line right"></span>
             </span>
           </div>
-          <slot>这是内容</slot>
+          <slot >这是内容</slot>
         </main>
         <footer class="alive-dialog-footer" v-if="bottomBtn">
           <div
@@ -73,7 +73,7 @@ export default {
     },
     clickOverlay: {
       type: Boolean,
-      default: true,
+      default: true
     },
     icon: {
       type: String,
@@ -86,10 +86,6 @@ export default {
     title: {
       type: String || null,
       default: null,
-    },
-    noContent: {
-      type: Boolean,
-      default: false,
     },
     bottomBtn: {
       type: String || null,

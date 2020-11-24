@@ -4,7 +4,8 @@ import Switch from './Switch/Switch.vue';
 import Tabs from './Tab/Tabs.vue';
 import TabBox from './Tab/TabBox.vue';
 import {ComponentOptions} from 'vue';
-const AliveWorkUI =  {
+
+export default  {
     install: (app:ComponentOptions) => {
         // Plugin code goes here
         app.component('Switch',Switch)
@@ -12,7 +13,6 @@ const AliveWorkUI =  {
         app.component('Dialog',Dialog)
         app.component('TabBox',TabBox)
         app.component('Tabs',Tabs)
+
     }
 }
-
-export default AliveWorkUI

@@ -3,9 +3,8 @@ import Dialog from './Dialog/Dialog.vue';
 
 export const $Dialog = (options: any) => {
   const { clickOverlay,
-    title, content, btnColor, icon,
-    center, noTitle, noContent, noFooter,
-    handleClose
+    title, content, btnColor, icon,bottomBtn,
+    center, handleClose
   } = options
   // let div = document.querySelector(".alive-dialog-modal") as Element;
   const div = document.createElement('div')
@@ -24,14 +23,11 @@ export const $Dialog = (options: any) => {
         btnColor,
         icon,
         center,
-        noTitle,
-        noContent,
-        noFooter,
         handleClose,
-
+        bottomBtn,
+        title,
       }, {
-        title: () => title,
-        content: () => content,
+        default: () => content,
       })
     }
   })
