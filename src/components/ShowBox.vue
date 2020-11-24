@@ -1,8 +1,8 @@
 <sourceCode> sourceCode </sourceCode>
 <template>
   <div class="show-box">
-    <a>
-      <slot name="title"> </slot>
+    <a style="font-size: 1.5rem">
+      <slot name="title" > </slot>
     </a>
     <p>
       <slot name="description"> </slot>

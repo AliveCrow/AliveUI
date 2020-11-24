@@ -19,6 +19,16 @@ const router = createRouter({
       component: () => import('../views/Use.vue')
     },
     {
+      path: '/Color',
+      name: 'Color',
+      component: () => import('../views/Color.vue')
+    },
+    {
+      path: '/Font',
+      name: 'Font',
+      component: () => import('../views/Font.vue')
+    },
+    {
       path: '/Switch',
       name: 'Switch',
       component: () => import('../components/SwitchPage/SwitchPage.vue')
@@ -39,6 +49,11 @@ const router = createRouter({
       path: '/Tab',
       name: 'Tab',
       component: () => import('../components/TabPage/TabPage.vue')
+    },
+    {
+      path: '/Table',
+      name: 'Table',
+      component: () => import('../components/TablePage/TablePage.vue')
     },
     {
       path: '/components',

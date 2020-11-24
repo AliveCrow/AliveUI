@@ -5,7 +5,7 @@
     npm install alive-work-ui -S
 ```
 
-### 引入 alive-work-ui
+## 引入 `alive-work-ui`
 #### 完整引入
 ```javascript
     import 'alive-work-ui/package/lib/alive-work-ui.css'

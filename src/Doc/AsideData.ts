@@ -20,11 +20,11 @@ export const AsideData =()=>{
             children:[
                 {
                     name:'Color色彩',
-                    path:'/Use'
+                    path:'/Color'
                 },
                 {
                     name:'字体',
-                    path:'/Use'
+                    path:'/Font'
                 }
             ]
         },
@@ -46,6 +46,10 @@ export const AsideData =()=>{
                 {
                     name:'Tab组件',
                     path:'/Tab'
+                },
+                {
+                    name:'Table组件',
+                    path:'/Table'
                 },
             ]
         }

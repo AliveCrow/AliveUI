@@ -11,9 +11,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12ab8f7e-77f9-474e-b275-4b00b6b9039f" name="默认更改列表" comment="aside样式,手机端">
+      <change afterPath="$PROJECT_DIR$/src/Doc/Color.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Doc/Font.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TablePage/TablePage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TablePage/TableShowComponents/Base.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TablePage/TableShowComponents/Border.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TablePage/TableShowComponents/State.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TablePage/TableShowComponents/Stripe.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Table/Table.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Table/TableBody.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Table/TableColumn.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Table/TableFooter.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Table/TableHeade.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Color.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Font.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/components.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doc/AsideData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doc/AsideData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Doc/Use.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doc/Use.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ShowBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ShowBox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SourceCode.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SourceCode.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/maize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/maize.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Use.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Use.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +89,7 @@
       <workItem from="1606152911564" duration="157000" />
       <workItem from="1606158186865" duration="1637000" />
       <workItem from="1606164300217" duration="505000" />
-      <workItem from="1606176029689" duration="6675000" />
+      <workItem from="1606176029689" duration="23717000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1605583165202</created>
@@ -141,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606181095214</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="完善使用文档">
+      <created>1606182789341</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1606182789341</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +198,8 @@
     <MESSAGE value="第一版发布" />
     <MESSAGE value="修改全部引入方法" />
     <MESSAGE value="加入完整引入的方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入完整引入的方法" />
+    <MESSAGE value="完善使用文档" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善使用文档" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1077" y="313" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605595749765">
@@ -208,10 +236,10 @@
     </state>
     <state x="-1458" y="197" key="Vcs.Push.Dialog.v2/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606176906568" />
     <state x="-1458" y="197" key="Vcs.Push.Dialog.v2/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605619429138" />
-    <state x="-1192" y="229" width="663" height="589" key="find.popup" timestamp="1606177230361">
+    <state x="-1192" y="229" width="663" height="589" key="find.popup" timestamp="1606223296780">
       <screen x="-1920" y="25" width="1920" height="996" />
     </state>
-    <state x="-1192" y="229" width="663" height="589" key="find.popup/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606177230361" />
+    <state x="-1192" y="229" width="663" height="589" key="find.popup/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606223296780" />
     <state x="-1192" y="229" width="663" height="590" key="find.popup/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605670459617" />
   </component>
 </project>

@@ -2,7 +2,7 @@
   <div>
     <ShowBox>
       <template v-slot:title>
-        <a>{{ component.__title.children[0].content }}</a>
+        <a style="font-size: 1.3rem">{{ component.__title.children[0].content }}</a>
       </template>
       <template v-slot:description>
         <blockquote class="description">
