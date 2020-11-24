@@ -10,7 +10,6 @@ import HighlightJS from './utils/vue3-hightlight'
 import importComponents from '../plugins/components'
 
 
-
 createApp(App)
     .use(importComponents)
     .use(router)

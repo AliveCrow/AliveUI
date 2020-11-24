@@ -6,7 +6,7 @@ import Dialog from '../src/lib/Dialog/Dialog.vue';
 import TabBox from '../src/lib/Tab/TabBox.vue';
 import Tabs from '../src/lib/Tab/Tabs.vue';
 import {ComponentOptions} from 'vue';
-export default {
+export default   {
   install: (app:ComponentOptions) => {
     // Plugin code goes here
     app.component('SourceCode',SourceCode)
@@ -18,3 +18,4 @@ export default {
 
   }
 }
+
