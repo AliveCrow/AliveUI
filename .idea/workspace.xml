@@ -14,11 +14,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/rollup.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Button/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Button/Button.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Dialog/Dialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Dialog/Dialog.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Switch/Switch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Switch/Switch.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Tab/Tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Tab/Tabs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/alive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/alive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doc/Start.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doc/Start.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doc/Use.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doc/Use.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/_var.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/var.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +72,8 @@
       <workItem from="1606150633484" duration="377000" />
       <workItem from="1606152911564" duration="157000" />
       <workItem from="1606158186865" duration="1637000" />
-      <workItem from="1606164300217" duration="316000" />
+      <workItem from="1606164300217" duration="505000" />
+      <workItem from="1606176029689" duration="826000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1605583165202</created>
@@ -118,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606159675679</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="修复rollup打包动画失效的问题">
+      <created>1606164801106</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606164801106</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +150,8 @@
     <MESSAGE value="aside样式,手机端" />
     <MESSAGE value="Nav组件和Aside组件响应式" />
     <MESSAGE value="使用rollup打包" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用rollup打包" />
+    <MESSAGE value="修复rollup打包动画失效的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复rollup打包动画失效的问题" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1077" y="313" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605595749765">
@@ -180,10 +187,10 @@
       <screen x="-1920" y="25" width="1920" height="998" />
     </state>
     <state x="-1458" y="197" key="Vcs.Push.Dialog.v2/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605619429138" />
-    <state x="-1192" y="229" width="663" height="589" key="find.popup" timestamp="1606164336260">
+    <state x="-1192" y="229" width="663" height="589" key="find.popup" timestamp="1606176555048">
       <screen x="-1920" y="25" width="1920" height="996" />
     </state>
-    <state x="-1192" y="229" width="663" height="589" key="find.popup/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606164336260" />
+    <state x="-1192" y="229" width="663" height="589" key="find.popup/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606176555048" />
     <state x="-1192" y="229" width="663" height="590" key="find.popup/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605670459617" />
   </component>
 </project>

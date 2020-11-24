@@ -10,8 +10,8 @@ export default {
 		globals: {
 			vue: 'Vue'
 		},
-		name: 'GritUI',
-		file: 'package/lib/GritUI.js',
+		name: 'alive-ui',
+		file: 'package/lib/alive-work-ui.js',
 		format: 'umd',
 		plugins: [terser()]
 	}],

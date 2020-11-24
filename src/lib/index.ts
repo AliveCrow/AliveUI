@@ -1,3 +1,4 @@
+import  './var.scss';
 import './alive.scss';
 import './svg.js';
 export { default as Switch } from './Switch/Switch.vue';

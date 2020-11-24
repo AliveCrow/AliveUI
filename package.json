@@ -1,11 +1,10 @@
 {
-  "name": "gritui",
-  "version": "0.0.6",
+  "name": "alive-work-ui",
+  "version": "1.0.0",
   "files": [
     "package/lib/*"
   ],
-  "main": "package/lib/GritUI.js",
-  "module": "package/lib/GritUI.esm.js",
+  "main": "package/lib/alive-work-ui.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
@@ -29,12 +28,12 @@
     "type": "git",
     "url": "git+https://github.com/AliveCrow/AliveUI.git"
   },
-  "keywords": [],
+  "keywords": ["vue3","vite","UI"],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AliveCrow/AliveUI/issues"
   },
   "homepage": "https://github.com/AliveCrow/AliveUI#readme",
-  "description": ""
+  "description": "vue3.0的开源UI组件库"
 }
