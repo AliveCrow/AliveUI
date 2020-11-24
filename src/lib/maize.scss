@@ -208,6 +208,11 @@
   background-color: #f0f0f0;
   font-family: "Monaco", "微软雅黑","PingFang SC", "Microsoft YaHei", sans-serif;
 }
+pre>code{
+  display: block;
+  padding: 20px;
+  line-height:23px;
+}
 
 /* 行内代码 */
 #write p code,
@@ -218,6 +223,7 @@
   border-radius: 4px;
   margin: 0 2px;
   word-break: break-all;
+
 }
 
 /* 文章插图 */
