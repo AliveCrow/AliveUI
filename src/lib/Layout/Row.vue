@@ -42,7 +42,7 @@ export default {
 }
 
 .alive-row-flex {
-  display: flex;
+  display: flex!important;
 }
 
 @mixin when($type) {

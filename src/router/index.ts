@@ -34,9 +34,9 @@ const router = createRouter({
       component:()=>import('../components/ContainerPage/ContainerPage.vue')
     },
     {
-      path: '/Font',
-      name: 'Font',
-      component: () => import('../views/Font.vue')
+      path: '/Icon',
+      name: 'Icon',
+      component: () => import('../views/Icon.vue')
     },
     {
       path: '/Switch',
