@@ -3,7 +3,7 @@
     <img src="../assets/logo.png" alt="" class="logo" width="121"/>
     <label style="position: relative">
       <input type="text" class="search" v-model="keyword" />
-      <svg class="icon" aria-hidden="true" @click="clearKeyword">
+      <svg class="icon search-icon" aria-hidden="true" @click="clearKeyword">
         <use xlink:href="#iconclose-outline"></use>
       </svg>
     </label>
@@ -207,6 +207,9 @@ aside {
     }
 
     .search {
+      display: none;
+    }
+    .search-icon{
       display: none;
     }
   }

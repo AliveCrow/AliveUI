@@ -24,6 +24,11 @@ const router = createRouter({
       component: () => import('../views/Color.vue')
     },
     {
+      path:'/Layout',
+      name:'Layout',
+      component:()=>import('../components/LayoutPage/LayoutPage.vue')
+    },
+    {
       path: '/Font',
       name: 'Font',
       component: () => import('../views/Font.vue')

@@ -7,7 +7,7 @@
       <Aside v-show="asideVisible" />
     </transition>
     <div class="router">
-      <div style="max-width: 800px; margin: 0 auto">
+      <div style="max-width: 900px; margin: 0 auto">
         <router-view v-slot="{ Component }">
           <transition name="fade" mode="out-in">
             <keep-alive>
@@ -61,8 +61,6 @@ export default {
   margin-left: auto;
   margin-right: auto;
   padding: 60px;
-  overflow-y: scroll !important;
-  overflow-y: overlay;
   &::-webkit-scrollbar {
     width: 8px;
   }

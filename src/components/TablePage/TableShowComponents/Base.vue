@@ -1,9 +1,12 @@
 <sourceCode>
 <title>基础用法</title>
-<p>data接受一个数组,<span>TableColumn</span>中使用<span>prop</span>属性来对应对象中的键名用<span>label</span>属性来定义表格的列名,使用 <span>width</span>来定义列宽</p>
+<div>
+  data接受一个数组,<span>TableColumn</span>中使用<span>prop</span>属性来对应对象中的键名用<span>label</span>属性来定义表格的列名,使用 <span>width</span>来定义列宽
+  <p>通过设置<span>caption</span>来设置表格标题,支持<span>html</span>格式</p>
+</div>
 </sourceCode>
 <template>
-  <Table :data="tableData" >
+  <Table :data="tableData"  caption="表格标题">
     <TableColumn prop="date" name="日期" width="200px"  />
     <TableColumn prop="name" name="姓名" width="100px" />
     <TableColumn prop="address" name="地址" />

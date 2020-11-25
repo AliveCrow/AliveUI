@@ -39,7 +39,8 @@
         Switch,
         Dialog,
         TabBox,
-        Tabs
+        Tabs,
+        Table
     } from 'alive-work-ui'
     
     createApp(App)
@@ -47,7 +48,8 @@
         .component('Switch',Switch)
         .component('Dialog',Dialog)
         .component('TabBox',TabBox)
-        .component('Tabs',Tabs)         
+        .component('Tabs',Tabs)    
+        .component('Table',Table)         
 ```
 
 

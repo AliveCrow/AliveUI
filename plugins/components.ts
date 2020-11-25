@@ -7,6 +7,8 @@ import TabBox from '../src/lib/Tab/TabBox.vue';
 import Tabs from '../src/lib/Tab/Tabs.vue';
 import Table from '../src/lib/Table/Table.vue';
 import TableColumn from '../src/lib/Table/TableColumn.vue';
+import Row from '../src/lib/Layout/Row.vue';
+import Column from '../src/lib/Layout/Column.vue';
 import {ComponentOptions} from 'vue';
 export default   {
   install: (app:ComponentOptions) => {
@@ -19,7 +21,8 @@ export default   {
     app.component('Tabs',Tabs)
     app.component('Table',Table)
     app.component('TableColumn',TableColumn)
-
+    app.component('aliveRow',Row)
+    app.component('aliveCol',Column)
   }
 }
 

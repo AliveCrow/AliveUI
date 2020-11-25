@@ -25,7 +25,11 @@ export const AsideData =()=>{
                 {
                     name:'字体',
                     path:'/Font'
-                }
+                },
+                {
+                    name:'Layout布局',
+                    path:'/Layout'
+                },
             ]
         },
         {

@@ -1,5 +1,6 @@
 <template>
   <table class=" alive-table-wrapper" style="width: 100%">
+    <caption v-if="caption!==''" v-html="caption"></caption>
     <colgroup>
       <col v-for="vNode in vNodes" :width="vNode.props.width">
     </colgroup>
@@ -36,6 +37,10 @@ export default {
     border: {
       type: Boolean,
       default: false
+    },
+    caption:{
+      type:String,
+      default:''
     },
     rowClassName:{
       type:Function,
@@ -78,6 +83,11 @@ export default {
 <style lang='scss'>
 
 .alive-table-wrapper {
+  caption{
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: left;
+  }
   width: 100%;
   vertical-align: baseline;
   border-collapse: collapse;
