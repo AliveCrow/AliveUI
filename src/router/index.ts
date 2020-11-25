@@ -29,6 +29,11 @@ const router = createRouter({
       component:()=>import('../components/LayoutPage/LayoutPage.vue')
     },
     {
+      path:'/Container',
+      name:'Container',
+      component:()=>import('../components/ContainerPage/ContainerPage.vue')
+    },
+    {
       path: '/Font',
       name: 'Font',
       component: () => import('../views/Font.vue')

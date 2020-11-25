@@ -11,33 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12ab8f7e-77f9-474e-b275-4b00b6b9039f" name="默认更改列表" comment="aside样式,手机端">
-      <change afterPath="$PROJECT_DIR$/src/components/LayoutPage/LayoutPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LayoutPage/LayoutShowComponents/Base.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LayoutPage/LayoutShowComponents/Flex.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LayoutPage/LayoutShowComponents/Gaps.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LayoutPage/LayoutShowComponents/Offset.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LayoutPage/LayoutShowComponents/Res.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/Layout/Column.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/Layout/Layout.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/Layout/Row.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Layout.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContainerPage/ContainerPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContainerPage/ContainerShowPage/Base.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Container/Aside.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Container/Footer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Container/Header.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Container/Main.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/components.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Doc/AsideData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doc/AsideData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doc/Start.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doc/Start.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doc/Use.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doc/Use.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Aside.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Aside.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ShowBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ShowBox.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TablePage/TableShowComponents/Base.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TablePage/TableShowComponents/Base.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Table/Table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Table/Table.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Table/TableBody.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Table/TableFooter.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Table/TableHeade.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/alive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/alive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Layout/Layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Container/Container.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Layout.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/NotFound.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NotFound.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +55,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="15.2.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.9" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -116,7 +103,7 @@
       <workItem from="1606158186865" duration="1637000" />
       <workItem from="1606164300217" duration="505000" />
       <workItem from="1606176029689" duration="23773000" />
-      <workItem from="1606247059686" duration="20155000" />
+      <workItem from="1606247059686" duration="33190000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1605583165202</created>
@@ -202,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606228686583</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="完成layout布局">
+      <created>1606307481460</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1606307481460</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +228,8 @@
     <MESSAGE value="加入完整引入的方法" />
     <MESSAGE value="完善使用文档" />
     <MESSAGE value="添加Table表格组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加Table表格组件" />
+    <MESSAGE value="完成layout布局" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成layout布局" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1500" y="175" width="1217" height="696" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606247095311">
@@ -249,6 +244,10 @@
       <screen x="-1920" y="25" width="1920" height="998" />
     </state>
     <state x="-1107" y="216" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605610144240" />
+    <state x="-1273" y="351" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1606308320232">
+      <screen x="-1920" y="25" width="1920" height="996" />
+    </state>
+    <state x="-1273" y="351" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606308320232" />
     <state width="1853" height="254" key="GridCell.Tab.0.bottom" timestamp="1606302317583">
       <screen x="-1920" y="25" width="1920" height="996" />
     </state>
@@ -270,10 +269,10 @@
     </state>
     <state x="-1348" y="39" key="SettingsEditor/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606150945632" />
     <state x="-1439" y="72" key="SettingsEditor/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605664154821" />
-    <state x="-1458" y="197" key="Vcs.Push.Dialog.v2" timestamp="1606176906568">
+    <state x="-1458" y="197" key="Vcs.Push.Dialog.v2" timestamp="1606307486633">
       <screen x="-1920" y="25" width="1920" height="996" />
     </state>
-    <state x="-1458" y="197" key="Vcs.Push.Dialog.v2/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606176906568" />
+    <state x="-1458" y="197" key="Vcs.Push.Dialog.v2/-1920.25.1920.996/0.25.1680.1025@-1920.25.1920.996" timestamp="1606307486633" />
     <state x="-1458" y="197" key="Vcs.Push.Dialog.v2/-1920.25.1920.998/0.25.1680.1025@-1920.25.1920.998" timestamp="1605619429138" />
     <state x="-1192" y="229" width="663" height="589" key="find.popup" timestamp="1606223296780">
       <screen x="-1920" y="25" width="1920" height="996" />

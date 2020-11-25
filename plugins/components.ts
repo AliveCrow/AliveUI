@@ -9,6 +9,11 @@ import Table from '../src/lib/Table/Table.vue';
 import TableColumn from '../src/lib/Table/TableColumn.vue';
 import Row from '../src/lib/Layout/Row.vue';
 import Column from '../src/lib/Layout/Column.vue';
+import Container from '../src/lib/Container/Container.vue';
+import Header from '../src/lib/Container/Header.vue';
+import Aside from '../src/lib/Container/Aside.vue';
+import Main from '../src/lib/Container/Main.vue';
+import Footer from '../src/lib/Container/Footer.vue';
 import {ComponentOptions} from 'vue';
 export default   {
   install: (app:ComponentOptions) => {
@@ -23,6 +28,11 @@ export default   {
     app.component('TableColumn',TableColumn)
     app.component('aliveRow',Row)
     app.component('aliveCol',Column)
+    app.component('aliveContainer',Container)
+    app.component('aliveHeader',Header)
+    app.component('aliveAside',Aside)
+    app.component('aliveMain',Main)
+    app.component('aliveFooter',Footer)
   }
 }
 
