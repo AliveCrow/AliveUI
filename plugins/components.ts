@@ -14,6 +14,7 @@ import Header from '../src/lib/Container/Header.vue';
 import Aside from '../src/lib/Container/Aside.vue';
 import Main from '../src/lib/Container/Main.vue';
 import Footer from '../src/lib/Container/Footer.vue';
+import Icon from '../src/lib/Icon/Icon.vue';
 import {ComponentOptions} from 'vue';
 export default   {
   install: (app:ComponentOptions) => {
@@ -33,6 +34,8 @@ export default   {
     app.component('aliveAside',Aside)
     app.component('aliveMain',Main)
     app.component('aliveFooter',Footer)
+    app.component('Icon',Icon)
+
   }
 }
 

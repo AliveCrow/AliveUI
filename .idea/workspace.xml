@@ -11,14 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12ab8f7e-77f9-474e-b275-4b00b6b9039f" name="默认更改列表" comment="aside样式,手机端">
+      <change afterPath="$PROJECT_DIR$/src/components/IconShowPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/Icon/Icon.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doc/AsideData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doc/AsideData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doc/Color.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doc/Color.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Layout/Row.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Layout/Row.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Color.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Color.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Font.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Icon.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/components.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/maize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/maize.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Icon.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +96,7 @@
       <workItem from="1606158186865" duration="1637000" />
       <workItem from="1606164300217" duration="505000" />
       <workItem from="1606176029689" duration="23773000" />
-      <workItem from="1606247059686" duration="40217000" />
+      <workItem from="1606247059686" duration="42196000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1605583165202</created>
@@ -198,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606325053914</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="完成Color页面展示,与Icon页面">
+      <created>1606333023140</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1606333023140</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +237,8 @@
     <MESSAGE value="添加Table表格组件" />
     <MESSAGE value="完成layout布局" />
     <MESSAGE value="完成Container布局方式" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成Container布局方式" />
+    <MESSAGE value="完成Color页面展示,与Icon页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成Color页面展示,与Icon页面" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1500" y="175" width="1217" height="696" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606247095311">

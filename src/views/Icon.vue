@@ -1,13 +1,16 @@
 <template>
   <div>
-    <h1   >
-      Icon 图标
-    </h1>
+    <div id="write">
+      <h1 >
+        Icon 图标 <sub>使用阿里云的iconfont</sub>
+      </h1>
+    </div>
+    <div class="content">
+      <SourceCode :component="IconShowPage" ></SourceCode>
+    </div>
     <div id='Font_app'>
       <div v-for="i in iconArr" class="icon-container">
-        <svg class="icon" >
-          <use :xlink:href="`#icon${i}`"></use>
-        </svg>
+        <Icon :name="i"></Icon>
         <span class="icon-name">{{i}}</span>
       </div>
     </div>
@@ -17,31 +20,28 @@
 
 <script lang="ts">
 import {IconFount} from '../Doc/AsideData'
+import IconShowPage from '../components/IconShowPage.vue';
 export default {
   name: 'Font',
-
   setup(){
     const iconArr = IconFount()
     return {
-      iconArr
+      iconArr,IconShowPage
     }
   }
 
 };
 </script>
 <style scoped lang='scss'>
-h1{
-  margin: 1.2em 0;
-  font-size: 2rem;
-  padding: 0;
-  font-weight: bold;
-  color: black;
-  text-align: left;
-}
 #Font_app{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  &:after {
+    content: "";
+    width: 119px;
+  }
   .icon-container{
     height: 120px;
     width: 120px;
@@ -66,8 +66,8 @@ h1{
     }
     .icon{
       fill: $color;
-      min-height: 30px;
-      min-width: 30px;
+      height: 30px;
+      width: 30px;
     }
     .icon-name{
       margin-top: 5px;
