@@ -1,89 +1,97 @@
 <template>
-  <table class=" alive-table-wrapper" style="width: 100%">
-    <caption v-if="caption!==''" v-html="caption"></caption>
+  <table class="alive-table-wrapper" style="width: 100%">
+    <caption v-if="caption !== ''" v-html="caption"></caption>
     <colgroup>
-      <col v-for="vNode in vNodes" :width="vNode.props.width">
+      <col v-for="vNode in vNodes" :width="vNode.props.width" />
     </colgroup>
     <thead>
-    <tr class="alive-table tr-border alive-table-head" >
-      <th v-for="vNode in vNodes" :class="{'th-td-border':border}">{{ vNode.props.name }}</th>
-    </tr>
+      <tr class="alive-table tr-border alive-table-head">
+        <th v-for="vNode in vNodes" :class="{ 'th-td-border': border }">
+          {{ vNode.props.name }}
+        </th>
+      </tr>
     </thead>
     <tbody class=" ">
-    <tr v-for="(item,index) in data"
-        class="tr-border alive-table alive-table-body"
-        :class="{'alive-table-stripe':stripe}"
-        :class="rowClassname(item,index)"
-    >
-      <td  v-for="vNode in vNodes" :class="{'th-td-border':border}">{{ item[vNode.props.prop] }}</td>
-    </tr>
+      <tr
+        v-for="(item, index) in data"
+        :class="
+          'tr-border alive-table alive-table-body ' +
+          rowClassname(item, index) +
+          ' ' +
+          [stripe ? 'alive-table-stripe ' : '']
+        "
+      >
+        <td v-for="vNode in vNodes" :class="{ 'th-td-border': border }">
+          {{ item[vNode.props.prop] }}
+        </td>
+      </tr>
     </tbody>
   </table>
 </template>
 
 <script lang="ts">
-import {ref,onMounted}from 'vue';
-import TableColumn from './TableColumn.vue';
+import { ref, onMounted } from "vue";
+import TableColumn from "./TableColumn.vue";
 
 export default {
-  name: 'Table',
-  components: {TableColumn},
+  name: "Table",
+  components: { TableColumn },
   props: {
     data: Array,
     stripe: {
       type: Boolean,
-      default: false
+      default: false,
     },
     border: {
       type: Boolean,
-      default: false
+      default: false,
     },
-    caption:{
-      type:String,
-      default:''
+    caption: {
+      type: String,
+      default: "",
     },
-    rowClassName:{
-      type:Function,
-    }
+    rowClassName: {
+      type: Function,
+    },
   },
-  setup(props:any, context) {
+  setup(props: any, context: any) {
     const vNodes = context.slots.default();
-    const rowClassname = (row,rowIndex)=>{
-      if(props.rowClassName){
-        console.log(props.rowClassName({row,rowIndex}));
-        return props.rowClassName({row,rowIndex})
+    const rowClassname = (row: any, rowIndex: any) => {
+      if (props.rowClassName) {
+        console.log(props.rowClassName({ row, rowIndex }));
+
+        return props.rowClassName({ row, rowIndex });
       }
-    }
+    };
     return {
       vNodes,
       TableColumn,
-      rowClassname
+      rowClassname,
     };
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
-.info-row{
-  background-color: $info!important;
+.info-row {
+  background-color: $info !important;
   color: #fff;
 }
-.warning-row{
-  background-color:rgba($warning,1)!important;
+.warning-row {
+  background-color: rgba($warning, 1) !important;
   color: #fff;
 }
-.success-row{
-  background-color: $success!important;
+.success-row {
+  background-color: $success !important;
   color: #fff;
 }
-.error-row{
-  background-color: $error!important;
+.error-row {
+  background-color: $error !important;
   color: #fff;
 }
 </style>
 <style lang='scss'>
-
 .alive-table-wrapper {
-  caption{
+  caption {
     font-size: 1.4rem;
     font-weight: 500;
     text-align: left;
@@ -93,12 +101,13 @@ export default {
   border-collapse: collapse;
   color: $color;
 
-  th, td {
+  th,
+  td {
     padding: 0 10px;
     font-size: 1rem;
   }
-  .th-td-border{
-    border: 1px solid rgba($color, .2);
+  .th-td-border {
+    border: 1px solid rgba($color, 0.2);
   }
 
   .alive-table {
@@ -106,12 +115,12 @@ export default {
   }
 
   .tr-border {
-    border-bottom: 1px solid rgba($color, .2);
+    border-bottom: 1px solid rgba($color, 0.2);
   }
 
   .alive-table-stripe {
     &:nth-of-type(2n) {
-      background-color: rgba($color,.1);
+      background-color: rgba($color, 0.1);
     }
   }
 
@@ -119,12 +128,10 @@ export default {
   }
 
   .alive-table-body {
-    transition: all .25s;
-
+    transition: all 0.25s;
     &:hover {
-      background-color: rgba($color, .1);
+      background-color: rgba($color, 0.1);
     }
   }
 }
-
 </style>

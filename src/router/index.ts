@@ -19,9 +19,19 @@ const router = createRouter({
       component: () => import('../views/Use.vue')
     },
     {
+      path: '/Icon',
+      name: 'Icon',
+      component: () => import('../views/Icon.vue')
+    },
+    {
       path: '/Color',
       name: 'Color',
       component: () => import('../views/Color.vue')
+    },
+    {
+      path:'/Radio',
+      name:'Radio',
+      component:()=>import('../components/RadioPage/RadioPage.vue')
     },
     {
       path:'/Layout',
@@ -32,11 +42,6 @@ const router = createRouter({
       path:'/Container',
       name:'Container',
       component:()=>import('../components/ContainerPage/ContainerPage.vue')
-    },
-    {
-      path: '/Icon',
-      name: 'Icon',
-      component: () => import('../views/Icon.vue')
     },
     {
       path: '/Switch',

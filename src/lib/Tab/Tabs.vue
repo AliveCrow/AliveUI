@@ -10,7 +10,6 @@
         [cNode.props.disabled === '' ? ' disabled' : '']
       "
       :ref="
-        //@ts-ignore
         (el) => {
           if (currentTab === cNode) selectedTab = el;
         }
@@ -37,20 +36,22 @@
   </transition>
 </template>
 <script lang="ts">
-import TabBox from "./TabBox.vue";
+
+import TabBox from './TabBox.vue';
 import {
   getCurrentInstance,
   onMounted,
   onUpdated,
   ref,
-  watchEffect,
-} from "vue";
+  watchEffect
+} from 'vue';
+
 export default {
   props: {
     index: {
       type: Number,
-      default: 0,
-    },
+      default: 0
+    }
   },
   setup(props: any, context: any) {
     //点击nav切换内容
@@ -58,7 +59,7 @@ export default {
     cNodes.forEach((cNode: any) => {
       //判断子组件类型是否为TabBox
       if (cNode.type !== TabBox) {
-        throw Error("子组件类型不为TabBox");
+        throw Error('子组件类型不为TabBox');
       }
     });
     let currentTab = ref(cNodes[props.index]);
@@ -69,19 +70,19 @@ export default {
     const selectedTab = ref<HTMLDivElement>();
     //@ts-ignore
     const NavBar = ref<HTMLDivElement>(null);
-    const TabBarWidth = ref("");
-    const TabBarPosition = ref(""); //位移差
+    const TabBarWidth = ref('');
+    const TabBarPosition = ref(''); //位移差
 
     onMounted(() => {
       watchEffect(() => {
         if (selectedTab.value) {
           const {
             width,
-            left: selectedNavLeft,
+            left: selectedNavLeft
           } = selectedTab.value.getBoundingClientRect();
-          TabBarWidth.value = width + "px";
-          const { left: navWidth } = NavBar.value.getBoundingClientRect();
-          TabBarPosition.value = selectedNavLeft - navWidth + "px";
+          TabBarWidth.value = width + 'px';
+          const {left: navWidth} = NavBar.value.getBoundingClientRect();
+          TabBarPosition.value = selectedNavLeft - navWidth + 'px';
         }
       });
     });
@@ -93,9 +94,9 @@ export default {
       currentTab,
       NavBar,
       TabBarWidth,
-      TabBarPosition,
+      TabBarPosition
     };
-  },
+  }
 };
 </script>
 <style lang="scss">

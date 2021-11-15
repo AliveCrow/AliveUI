@@ -6,7 +6,6 @@
     <SourceCode :component="Offset"></SourceCode>
     <SourceCode :component="Flex"></SourceCode>
     <SourceCode :component="Res"></SourceCode>
-
   </div>
 </template>
 

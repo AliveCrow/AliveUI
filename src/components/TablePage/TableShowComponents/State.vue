@@ -41,9 +41,8 @@ export default {
       ]
     };
   },
-  setup(props,context) {
+  setup(props: any, context: any) {
     const tableRowClassName = ({row,rowIndex}) => {
-      console.log(row,rowIndex);
       if (rowIndex === 1) {
         return 'warning-row'
       } else if (rowIndex === 3) {

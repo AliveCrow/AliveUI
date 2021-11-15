@@ -1,7 +1,5 @@
 <template>
-  <div class="alive-col"
-       :class="`alive-col-${span}`"
-       :class="`alive-col-offset-${offset}`"
+  <div :class="'alive-col '+`alive-col-${span} `+` alive-col-offset-${offset}`"
        ref="aliveCol"
   >
     <slot></slot>
@@ -39,9 +37,10 @@ export default {
         }
       });
       if (gaps.value) {
+        console.log();
         //取消开头和结尾的gap
-        parentComponent.ctx.$el.style.marginLeft = `-${gaps.value / 2}px`;
-        parentComponent.ctx.$el.style.marginRight = parentComponent.ctx.$el.style.marginLeft;
+        aliveCol.value.parentNode.style.marginLeft = `-${gaps.value / 2}px`;
+        aliveCol.value.parentNode.style.marginRight = aliveCol.value.parentNode.style.marginLeft
         aliveCol.value.style.paddingLeft = `${gaps.value / 2}px`;
         aliveCol.value.style.paddingRight = aliveCol.value.style.paddingLeft;
       }

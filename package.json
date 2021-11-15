@@ -7,7 +7,7 @@
   "main": "package/lib/alive-work-ui.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "rm -rf ./dist/ && vite build"
   },
   "dependencies": {
     "highlight.js": "10.3.2",

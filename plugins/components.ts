@@ -1,5 +1,4 @@
 import SourceCode from '../src/components/SourceCode.vue';
-
 import Switch from '../src/lib/Switch/Switch.vue';
 import Button from '../src/lib/Button/Button.vue';
 import Dialog from '../src/lib/Dialog/Dialog.vue';
@@ -15,6 +14,8 @@ import Aside from '../src/lib/Container/Aside.vue';
 import Main from '../src/lib/Container/Main.vue';
 import Footer from '../src/lib/Container/Footer.vue';
 import Icon from '../src/lib/Icon/Icon.vue';
+import Radio from '../src/lib/Radio/Radio.vue';
+import RadioGroup from '../src/lib/Radio/RadioGroup.vue';
 import {ComponentOptions} from 'vue';
 export default   {
   install: (app:ComponentOptions) => {
@@ -35,7 +36,8 @@ export default   {
     app.component('aliveMain',Main)
     app.component('aliveFooter',Footer)
     app.component('Icon',Icon)
-
+    app.component('Radio',Radio)
+    app.component('RadioGroup',RadioGroup)
   }
 }
 

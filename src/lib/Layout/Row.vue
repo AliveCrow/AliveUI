@@ -1,5 +1,5 @@
 <template>
-  <div  :class="{'alive-row-flex':type==='flex'?'alive-row-flex':'alive-row'}" :class="`alive-row-is-justify-${justify}`"
+  <div :class="[ type ==='flex'?'alive-row-flex ':'alive-row ']+[` alive-row-is-justify-${justify}`]"
   >
     <slot></slot>
   </div>
@@ -42,11 +42,11 @@ export default {
 }
 
 .alive-row-flex {
-  display: flex!important;
+  display: flex !important;
 }
 
 @mixin when($type) {
-  $name: 'alive-row-is-justify-'+$type !global;
+  $name: 'alive-row-is-justify-'+$type;
   .#{$name} {
     justify-content: $type;
     @content

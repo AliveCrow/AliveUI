@@ -284,6 +284,10 @@ export const AsideData =()=>{
             name:'组件',
             children:[
                 {
+                    name:'Radio单选框',
+                    path:'/Radio'
+                },
+                {
                     name:'Switch组件',
                     path:'/Switch'
                 },

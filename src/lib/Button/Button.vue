@@ -25,11 +25,19 @@
       @mousedown="onMouseDown"
       @mouseup="onMouseUp"
     >
-      <div style="display: flex">
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        "
+      >
         <div v-if="icon">
           <svg
+            style="height: 17px; width: 20px"
             :class="
-              'icon alive-button-svg alive-icon' +
+              'icon alive-button-svg alive-icon ' +
               [loading ? ' icon-loading' : '']
             "
             aria-hidden="true"
